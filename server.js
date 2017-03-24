@@ -21,7 +21,7 @@ var router = express.Router();              // get an instance of the express Ro
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
-    res.json({ message: 'hooray! welcome to our api!' });   
+    res.json({ message: 'hooray! welcome to our api!' });
 });
 
 // more routes for our API will happen here
@@ -39,4 +39,3 @@ console.log('Magic happens on port ' + port);
 // =============================================================================
 var mongoose   = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/production'); // connect to our database
-
