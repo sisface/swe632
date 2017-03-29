@@ -7,7 +7,8 @@ SOFTWARE NEEDED
 
 SETUP
 - Run: `npm install`.
-- TODO: Add command for ingesting MongoDB data.  (Note: only do this once).
+- Install [MongoDB](http://docs.mongodb.com/manual/installation/) on your platform .
+- Make sure MongoDB is running, then ingest data: `mongoimport -host localhost:27017 -db production -collection airports airports.json --jsonArray`  (Note: only do this once).
 
 TO RUN
 - Run: `mongod`.
