@@ -1,0 +1,1838 @@
+[
+    {
+        "name": "Edmonton International Airport",
+        "latitude": 53.309700012200004,
+        "longitude": -113.580001831,
+        "elevation": 2373,
+        "country": "CA",
+        "location": "Edmonton",
+        "code": "CYEG"
+    },
+    {
+        "name": "Ottawa Macdonald-Cartier International Airport",
+        "latitude": 45.3224983215332,
+        "longitude": -75.66919708251953,
+        "elevation": 374,
+        "country": "CA",
+        "location": "Ottawa",
+        "code": "YOW"
+    },
+    {
+        "name": "Montreal / Pierre Elliott Trudeau International Airport",
+        "latitude": 45.4706001282,
+        "longitude": -73.7407989502,
+        "elevation": 118,
+        "country": "CA",
+        "location": "Montréal",
+        "code": "YUL"
+    },
+    {
+        "name": "Winnipeg / James Armstrong Richardson International Airport",
+        "latitude": 49.909999847399995,
+        "longitude": -97.2398986816,
+        "elevation": 783,
+        "country": "CA",
+        "location": "Winnipeg",
+        "code": "YWG"
+    },
+    {
+        "name": "Lester B. Pearson International Airport",
+        "latitude": 43.6772003174,
+        "longitude": -79.63059997559999,
+        "elevation": 569,
+        "country": "CA",
+        "location": "Toronto",
+        "code": "YYZ"
+    },
+    {
+        "name": "OR Tambo International Airport",
+        "latitude": -26.1392,
+        "longitude": 28.246,
+        "elevation": 5558,
+        "country": "ZA",
+        "location": "Johannesburg",
+        "code": "FAOR"
+    },
+    {
+        "name": "Albuquerque International Sunport Airport",
+        "latitude": 35.040199279785156,
+        "longitude": -106.60900115966797,
+        "elevation": 5355,
+        "country": "US",
+        "location": "Albuquerque",
+        "code": "ABQ"
+    },
+    {
+        "name": "Andrews Air Force Base",
+        "latitude": 38.810798645,
+        "longitude": -76.86699676510001,
+        "elevation": 280,
+        "country": "US",
+        "location": "Camp Springs",
+        "code": "ADW"
+    },
+    {
+        "name": "Fort Worth Alliance Airport",
+        "latitude": 32.9875984192,
+        "longitude": -97.31880187990001,
+        "elevation": 722,
+        "country": "US",
+        "location": "Fort Worth",
+        "code": "AFW"
+    },
+    {
+        "name": "Augusta Regional At Bush Field",
+        "latitude": 33.36989974975586,
+        "longitude": -81.9645004272461,
+        "elevation": 144,
+        "country": "US",
+        "location": "Augusta",
+        "code": "AGS"
+    },
+    {
+        "name": "Rick Husband Amarillo International Airport",
+        "latitude": 35.219398498535156,
+        "longitude": -101.70600128173828,
+        "elevation": 3607,
+        "country": "US",
+        "location": "Amarillo",
+        "code": "AMA"
+    },
+    {
+        "name": "Hartsfield Jackson Atlanta International Airport",
+        "latitude": 33.63669967651367,
+        "longitude": -84.4281005859375,
+        "elevation": 1026,
+        "country": "US",
+        "location": "Atlanta",
+        "code": "ATL"
+    },
+    {
+        "name": "Austin Bergstrom International Airport",
+        "latitude": 30.194499969482422,
+        "longitude": -97.6698989868164,
+        "elevation": 542,
+        "country": "US",
+        "location": "Austin",
+        "code": "AUS"
+    },
+    {
+        "name": "Asheville Regional Airport",
+        "latitude": 35.43619918823242,
+        "longitude": -82.54180145263672,
+        "elevation": 2165,
+        "country": "US",
+        "location": "Asheville",
+        "code": "AVL"
+    },
+    {
+        "name": "Beale Air Force Base",
+        "latitude": 39.136100769,
+        "longitude": -121.43699646,
+        "elevation": 113,
+        "country": "US",
+        "location": "Marysville",
+        "code": "BAB"
+    },
+    {
+        "name": "Barksdale Air Force Base",
+        "latitude": 32.5018005371,
+        "longitude": -93.6626968384,
+        "elevation": 166,
+        "country": "US",
+        "location": "Bossier City",
+        "code": "BAD"
+    },
+    {
+        "name": "Bradley International Airport",
+        "latitude": 41.9388999939,
+        "longitude": -72.68319702149999,
+        "elevation": 173,
+        "country": "US",
+        "location": "Hartford",
+        "code": "BDL"
+    },
+    {
+        "name": "Boeing Field King County International Airport",
+        "latitude": 47.529998779296875,
+        "longitude": -122.302001953125,
+        "elevation": 21,
+        "country": "US",
+        "location": "Seattle",
+        "code": "BFI"
+    },
+    {
+        "name": "Bangor International Airport",
+        "latitude": 44.80739974975586,
+        "longitude": -68.8281021118164,
+        "elevation": 192,
+        "country": "US",
+        "location": "Bangor",
+        "code": "BGR"
+    },
+    {
+        "name": "Birmingham-Shuttlesworth International Airport",
+        "latitude": 33.56290054,
+        "longitude": -86.75350189,
+        "elevation": 650,
+        "country": "US",
+        "location": "Birmingham",
+        "code": "BHM"
+    },
+    {
+        "name": "Billings Logan International Airport",
+        "latitude": 45.807701110839844,
+        "longitude": -108.54299926757812,
+        "elevation": 3652,
+        "country": "US",
+        "location": "Billings",
+        "code": "BIL"
+    },
+    {
+        "name": "Scott AFB/Midamerica Airport",
+        "latitude": 38.5452,
+        "longitude": -89.835197,
+        "elevation": 459,
+        "country": "US",
+        "location": "Belleville",
+        "code": "BLV"
+    },
+    {
+        "name": "Central Illinois Regional Airport at Bloomington-Normal",
+        "latitude": 40.47710037,
+        "longitude": -88.91590118,
+        "elevation": 871,
+        "country": "US",
+        "location": "Bloomington/Normal",
+        "code": "BMI"
+    },
+    {
+        "name": "Nashville International Airport",
+        "latitude": 36.1245002746582,
+        "longitude": -86.6781997680664,
+        "elevation": 599,
+        "country": "US",
+        "location": "Nashville",
+        "code": "BNA"
+    },
+    {
+        "name": "Boise Air Terminal/Gowen field",
+        "latitude": 43.56439972,
+        "longitude": -116.2229996,
+        "elevation": 2871,
+        "country": "US",
+        "location": "Boise",
+        "code": "BOI"
+    },
+    {
+        "name": "General Edward Lawrence Logan International Airport",
+        "latitude": 42.36429977,
+        "longitude": -71.00520325,
+        "elevation": 20,
+        "country": "US",
+        "location": "Boston",
+        "code": "BOS"
+    },
+    {
+        "name": "Baton Rouge Metropolitan, Ryan Field",
+        "latitude": 30.53319931,
+        "longitude": -91.14959717,
+        "elevation": "NA",
+        "country": "US-LA",
+        "location": "BTR",
+        "code": ""
+    },
+    {
+        "name": "Buffalo Niagara International Airport",
+        "latitude": 42.94049835,
+        "longitude": -78.73220062,
+        "elevation": 728,
+        "country": "US",
+        "location": "Buffalo",
+        "code": "BUF"
+    },
+    {
+        "name": "Baltimore/Washington International Thurgood Marshall Airport",
+        "latitude": 39.17539978,
+        "longitude": -76.66829681,
+        "elevation": 146,
+        "country": "US",
+        "location": "Baltimore",
+        "code": "BWI"
+    },
+    {
+        "name": "Columbia Metropolitan Airport",
+        "latitude": 33.93880081176758,
+        "longitude": -81.11949920654297,
+        "elevation": 236,
+        "country": "US",
+        "location": "Columbia",
+        "code": "CAE"
+    },
+    {
+        "name": "Columbus Air Force Base",
+        "latitude": 33.6437988281,
+        "longitude": -88.44380187990001,
+        "elevation": 219,
+        "country": "US",
+        "location": "Columbus",
+        "code": "CBM"
+    },
+    {
+        "name": "Lovell Field",
+        "latitude": 35.035301208496094,
+        "longitude": -85.20379638671875,
+        "elevation": 683,
+        "country": "US",
+        "location": "Chattanooga",
+        "code": "CHA"
+    },
+    {
+        "name": "Charleston Air Force Base-International Airport",
+        "latitude": 32.89860153,
+        "longitude": -80.04049683,
+        "elevation": 46,
+        "country": "US",
+        "location": "Charleston",
+        "code": "CHS"
+    },
+    {
+        "name": "The Eastern Iowa Airport",
+        "latitude": 41.884700775146484,
+        "longitude": -91.71080017089844,
+        "elevation": 869,
+        "country": "US",
+        "location": "Cedar Rapids",
+        "code": "CID"
+    },
+    {
+        "name": "Cleveland Hopkins International Airport",
+        "latitude": 41.4117012024,
+        "longitude": -81.8498001099,
+        "elevation": 791,
+        "country": "US",
+        "location": "Cleveland",
+        "code": "CLE"
+    },
+    {
+        "name": "Charlotte Douglas International Airport",
+        "latitude": 35.2140007019043,
+        "longitude": -80.94309997558594,
+        "elevation": 748,
+        "country": "US",
+        "location": "Charlotte",
+        "code": "CLT"
+    },
+    {
+        "name": "Port Columbus International Airport",
+        "latitude": 39.99800109863281,
+        "longitude": -82.89189910888672,
+        "elevation": 815,
+        "country": "US",
+        "location": "Columbus",
+        "code": "CMH"
+    },
+    {
+        "name": "City of Colorado Springs Municipal Airport",
+        "latitude": 38.805801391602,
+        "longitude": -104.70099639893,
+        "elevation": 6187,
+        "country": "US",
+        "location": "Colorado Springs",
+        "code": "COS"
+    },
+    {
+        "name": "Casper-Natrona County International Airport",
+        "latitude": 42.90800095,
+        "longitude": -106.4639969,
+        "elevation": 5350,
+        "country": "US",
+        "location": "Casper",
+        "code": "CPR"
+    },
+    {
+        "name": "Corpus Christi International Airport",
+        "latitude": 27.77039909362793,
+        "longitude": -97.5011978149414,
+        "elevation": 44,
+        "country": "US",
+        "location": "Corpus Christi",
+        "code": "CRP"
+    },
+    {
+        "name": "Yeager Airport",
+        "latitude": 38.37310028076172,
+        "longitude": -81.59320068359375,
+        "elevation": 981,
+        "country": "US",
+        "location": "Charleston",
+        "code": "CRW"
+    },
+    {
+        "name": "Cincinnati Northern Kentucky International Airport",
+        "latitude": 39.0488014221,
+        "longitude": -84.6678009033,
+        "elevation": 896,
+        "country": "US",
+        "location": "Cincinnati",
+        "code": "CVG"
+    },
+    {
+        "name": "Cannon Air Force Base",
+        "latitude": 34.3828010559,
+        "longitude": -103.321998596,
+        "elevation": 4295,
+        "country": "US",
+        "location": "Clovis",
+        "code": "CVS"
+    },
+    {
+        "name": "Daytona Beach International Airport",
+        "latitude": 29.179899,
+        "longitude": -81.058098,
+        "elevation": 34,
+        "country": "US",
+        "location": "Daytona Beach",
+        "code": "DAB"
+    },
+    {
+        "name": "Dallas Love Field",
+        "latitude": 32.84709930419922,
+        "longitude": -96.85179901123047,
+        "elevation": 487,
+        "country": "US",
+        "location": "Dallas",
+        "code": "DAL"
+    },
+    {
+        "name": "James M Cox Dayton International Airport",
+        "latitude": 39.902400970458984,
+        "longitude": -84.21939849853516,
+        "elevation": 1009,
+        "country": "US",
+        "location": "Dayton",
+        "code": "DAY"
+    },
+    {
+        "name": "Dubuque Regional Airport",
+        "latitude": 42.40200043,
+        "longitude": -90.70950317,
+        "elevation": 1077,
+        "country": "US",
+        "location": "Dubuque",
+        "code": "DBQ"
+    },
+    {
+        "name": "Ronald Reagan Washington National Airport",
+        "latitude": 38.8521,
+        "longitude": -77.037697,
+        "elevation": 15,
+        "country": "US",
+        "location": "Washington",
+        "code": "DCA"
+    },
+    {
+        "name": "Denver International Airport",
+        "latitude": 39.861698150635,
+        "longitude": -104.672996521,
+        "elevation": 5431,
+        "country": "US",
+        "location": "Denver",
+        "code": "DEN"
+    },
+    {
+        "name": "Dallas Fort Worth International Airport",
+        "latitude": 32.89680099487305,
+        "longitude": -97.03800201416016,
+        "elevation": 607,
+        "country": "US",
+        "location": "Dallas-Fort Worth",
+        "code": "DFW"
+    },
+    {
+        "name": "Laughlin Air Force Base",
+        "latitude": 29.359500885,
+        "longitude": -100.777999878,
+        "elevation": 1082,
+        "country": "US",
+        "location": "Del Rio",
+        "code": "DLF"
+    },
+    {
+        "name": "Duluth International Airport",
+        "latitude": 46.8420982361,
+        "longitude": -92.19360351559999,
+        "elevation": 1428,
+        "country": "US",
+        "location": "Duluth",
+        "code": "DLH"
+    },
+    {
+        "name": "Dover Air Force Base",
+        "latitude": 39.12950134,
+        "longitude": -75.46600342,
+        "elevation": 24,
+        "country": "US",
+        "location": "Dover",
+        "code": "DOV"
+    },
+    {
+        "name": "Des Moines International Airport",
+        "latitude": 41.534000396728516,
+        "longitude": -93.66310119628906,
+        "elevation": 958,
+        "country": "US",
+        "location": "Des Moines",
+        "code": "DSM"
+    },
+    {
+        "name": "Detroit Metropolitan Wayne County Airport",
+        "latitude": 42.212398529052734,
+        "longitude": -83.35340118408203,
+        "elevation": 645,
+        "country": "US",
+        "location": "Detroit",
+        "code": "DTW"
+    },
+    {
+        "name": "Dyess Air Force Base",
+        "latitude": 32.4207992554,
+        "longitude": -99.854598999,
+        "elevation": 1789,
+        "country": "US",
+        "location": "Abilene",
+        "code": "DYS"
+    },
+    {
+        "name": "Edwards Air Force Base",
+        "latitude": 34.905399,
+        "longitude": -117.884003,
+        "elevation": 2312,
+        "country": "US",
+        "location": "Edwards",
+        "code": "EDW"
+    },
+    {
+        "name": "Vance Air Force Base",
+        "latitude": 36.339199066199996,
+        "longitude": -97.9164962769,
+        "elevation": 1307,
+        "country": "US",
+        "location": "Enid",
+        "code": "END"
+    },
+    {
+        "name": "Erie International Tom Ridge Field",
+        "latitude": 42.0831270134,
+        "longitude": -80.1738667488,
+        "elevation": 732,
+        "country": "US",
+        "location": "Erie",
+        "code": "ERI"
+    },
+    {
+        "name": "Newark Liberty International Airport",
+        "latitude": 40.692501068115234,
+        "longitude": -74.168701171875,
+        "elevation": 18,
+        "country": "US",
+        "location": "Newark",
+        "code": "EWR"
+    },
+    {
+        "name": "Wright-Patterson Air Force Base",
+        "latitude": 39.8260993958,
+        "longitude": -84.0483016968,
+        "elevation": 823,
+        "country": "US",
+        "location": "Dayton",
+        "code": "FFO"
+    },
+    {
+        "name": "Fort Lauderdale Hollywood International Airport",
+        "latitude": 26.072599411010742,
+        "longitude": -80.15270233154297,
+        "elevation": 9,
+        "country": "US",
+        "location": "Fort Lauderdale",
+        "code": "FLL"
+    },
+    {
+        "name": "Fort Smith Regional Airport",
+        "latitude": 35.33660125732422,
+        "longitude": -94.36740112304688,
+        "elevation": 469,
+        "country": "US",
+        "location": "Fort Smith",
+        "code": "FSM"
+    },
+    {
+        "name": "Fort Worth Meacham International Airport",
+        "latitude": 32.8198013306,
+        "longitude": -97.36239624019998,
+        "elevation": 710,
+        "country": "US",
+        "location": "Fort Worth",
+        "code": "FTW"
+    },
+    {
+        "name": "Fort Wayne International Airport",
+        "latitude": 40.97850037,
+        "longitude": -85.19509888,
+        "elevation": 814,
+        "country": "US",
+        "location": "Fort Wayne",
+        "code": "FWA"
+    },
+    {
+        "name": "Spokane International Airport",
+        "latitude": 47.61989974975586,
+        "longitude": -117.53399658203125,
+        "elevation": 2376,
+        "country": "US",
+        "location": "Spokane",
+        "code": "GEG"
+    },
+    {
+        "name": "Gulfport Biloxi International Airport",
+        "latitude": 30.40730094909668,
+        "longitude": -89.07009887695312,
+        "elevation": 28,
+        "country": "US",
+        "location": "Gulfport",
+        "code": "GPT"
+    },
+    {
+        "name": "Austin Straubel International Airport",
+        "latitude": 44.48509979248047,
+        "longitude": -88.12960052490234,
+        "elevation": 695,
+        "country": "US",
+        "location": "Green Bay",
+        "code": "GRB"
+    },
+    {
+        "name": "Seymour Johnson Air Force Base",
+        "latitude": 35.33940125,
+        "longitude": -77.96060181,
+        "elevation": 109,
+        "country": "US",
+        "location": "Goldsboro",
+        "code": "GSB"
+    },
+    {
+        "name": "Piedmont Triad International Airport",
+        "latitude": 36.097801208496094,
+        "longitude": -79.93730163574219,
+        "elevation": 925,
+        "country": "US",
+        "location": "Greensboro",
+        "code": "GSO"
+    },
+    {
+        "name": "Greenville Spartanburg International Airport",
+        "latitude": 34.8956985474,
+        "longitude": -82.2189025879,
+        "elevation": 964,
+        "country": "US",
+        "location": "Greenville",
+        "code": "GSP"
+    },
+    {
+        "name": "Grissom Air Reserve Base",
+        "latitude": 40.648101806599996,
+        "longitude": -86.1520996094,
+        "elevation": 812,
+        "country": "US",
+        "location": "Peru",
+        "code": "GUS"
+    },
+    {
+        "name": "Range Regional Airport",
+        "latitude": 47.38660049,
+        "longitude": -92.83899689,
+        "elevation": 1354,
+        "country": "US",
+        "location": "Hibbing",
+        "code": "HIB"
+    },
+    {
+        "name": "Holloman Air Force Base",
+        "latitude": 32.8525009155,
+        "longitude": -106.107002258,
+        "elevation": 4093,
+        "country": "US",
+        "location": "Alamogordo",
+        "code": "HMN"
+    },
+    {
+        "name": "William P Hobby Airport",
+        "latitude": 29.64539909,
+        "longitude": -95.27890015,
+        "elevation": 46,
+        "country": "US",
+        "location": "Houston",
+        "code": "HOU"
+    },
+    {
+        "name": "Huntsville International Carl T Jones Field",
+        "latitude": 34.637199401855,
+        "longitude": -86.775100708008,
+        "elevation": 629,
+        "country": "US",
+        "location": "Huntsville",
+        "code": "HSV"
+    },
+    {
+        "name": "Tri-State/Milton J. Ferguson Field",
+        "latitude": 38.36669922,
+        "longitude": -82.55799866,
+        "elevation": 828,
+        "country": "US",
+        "location": "Huntington",
+        "code": "HTS"
+    },
+    {
+        "name": "Washington Dulles International Airport",
+        "latitude": 38.94449997,
+        "longitude": -77.45580292,
+        "elevation": 312,
+        "country": "US",
+        "location": "Washington",
+        "code": "IAD"
+    },
+    {
+        "name": "George Bush Intercontinental Houston Airport",
+        "latitude": 29.984399795532227,
+        "longitude": -95.34140014648438,
+        "elevation": 97,
+        "country": "US",
+        "location": "Houston",
+        "code": "IAH"
+    },
+    {
+        "name": "Wichita Mid Continent Airport",
+        "latitude": 37.649898529052734,
+        "longitude": -97.43309783935547,
+        "elevation": 1333,
+        "country": "US",
+        "location": "Wichita",
+        "code": "ICT"
+    },
+    {
+        "name": "Indianapolis International Airport",
+        "latitude": 39.7173,
+        "longitude": -86.294403,
+        "elevation": 797,
+        "country": "US",
+        "location": "Indianapolis",
+        "code": "IND"
+    },
+    {
+        "name": "Jackson-Medgar Wiley Evers International Airport",
+        "latitude": 32.3111991882,
+        "longitude": -90.0758972168,
+        "elevation": 346,
+        "country": "US",
+        "location": "Jackson",
+        "code": "JAN"
+    },
+    {
+        "name": "Jacksonville International Airport",
+        "latitude": 30.49410057067871,
+        "longitude": -81.68789672851562,
+        "elevation": 30,
+        "country": "US",
+        "location": "Jacksonville",
+        "code": "JAX"
+    },
+    {
+        "name": "John F Kennedy International Airport",
+        "latitude": 40.63980103,
+        "longitude": -73.77890015,
+        "elevation": 13,
+        "country": "US",
+        "location": "New York",
+        "code": "JFK"
+    },
+    {
+        "name": "Joplin Regional Airport",
+        "latitude": 37.151798248291016,
+        "longitude": -94.49829864501953,
+        "elevation": 981,
+        "country": "US",
+        "location": "Joplin",
+        "code": "JLN"
+    },
+    {
+        "name": "McCarran International Airport",
+        "latitude": 36.08010101,
+        "longitude": -115.1520004,
+        "elevation": 2181,
+        "country": "US",
+        "location": "Las Vegas",
+        "code": "LAS"
+    },
+    {
+        "name": "Los Angeles International Airport",
+        "latitude": 33.94250107,
+        "longitude": -118.4079971,
+        "elevation": 125,
+        "country": "US",
+        "location": "Los Angeles",
+        "code": "LAX"
+    },
+    {
+        "name": "Lubbock Preston Smith International Airport",
+        "latitude": 33.66360092163086,
+        "longitude": -101.822998046875,
+        "elevation": 3282,
+        "country": "US",
+        "location": "Lubbock",
+        "code": "LBB"
+    },
+    {
+        "name": "Rickenbacker International Airport",
+        "latitude": 39.813801,
+        "longitude": -82.927803,
+        "elevation": 744,
+        "country": "US",
+        "location": "Columbus",
+        "code": "LCK"
+    },
+    {
+        "name": "Blue Grass Airport",
+        "latitude": 38.0364990234375,
+        "longitude": -84.60590362548828,
+        "elevation": 979,
+        "country": "US",
+        "location": "Lexington",
+        "code": "LEX"
+    },
+    {
+        "name": "Langley Air Force Base",
+        "latitude": 37.082901001,
+        "longitude": -76.360496521,
+        "elevation": 11,
+        "country": "US",
+        "location": "Hampton",
+        "code": "LFI"
+    },
+    {
+        "name": "Lafayette Regional Airport",
+        "latitude": 30.20529938,
+        "longitude": -91.98760223,
+        "elevation": 42,
+        "country": "US",
+        "location": "Lafayette",
+        "code": "LFT"
+    },
+    {
+        "name": "La Guardia Airport",
+        "latitude": 40.77719879,
+        "longitude": -73.87259674,
+        "elevation": 21,
+        "country": "US",
+        "location": "New York",
+        "code": "LGA"
+    },
+    {
+        "name": "Bill & Hillary Clinton National Airport/Adams Field",
+        "latitude": 34.729400634799994,
+        "longitude": -92.2242965698,
+        "elevation": 262,
+        "country": "US",
+        "location": "Little Rock",
+        "code": "LIT"
+    },
+    {
+        "name": "Altus Air Force Base",
+        "latitude": 34.667098999,
+        "longitude": -99.2667007446,
+        "elevation": 1382,
+        "country": "US",
+        "location": "Altus",
+        "code": "LTS"
+    },
+    {
+        "name": "Luke Air Force Base",
+        "latitude": 33.534999847399995,
+        "longitude": -112.383003235,
+        "elevation": 1085,
+        "country": "US",
+        "location": "Glendale",
+        "code": "LUF"
+    },
+    {
+        "name": "MBS International Airport",
+        "latitude": 43.532901763916016,
+        "longitude": -84.07959747314453,
+        "elevation": 668,
+        "country": "US",
+        "location": "Saginaw",
+        "code": "MBS"
+    },
+    {
+        "name": "Mac Dill Air Force Base",
+        "latitude": 27.84930038,
+        "longitude": -82.52120209,
+        "elevation": 14,
+        "country": "US",
+        "location": "Tampa",
+        "code": "MCF"
+    },
+    {
+        "name": "Kansas City International Airport",
+        "latitude": 39.2976,
+        "longitude": -94.713898,
+        "elevation": 1026,
+        "country": "US",
+        "location": "Kansas City",
+        "code": "MCI"
+    },
+    {
+        "name": "Orlando International Airport",
+        "latitude": 28.429399490356445,
+        "longitude": -81.30899810791016,
+        "elevation": 96,
+        "country": "US",
+        "location": "Orlando",
+        "code": "MCO"
+    },
+    {
+        "name": "Chicago Midway International Airport",
+        "latitude": 41.7859992980957,
+        "longitude": -87.75240325927734,
+        "elevation": 620,
+        "country": "US",
+        "location": "Chicago",
+        "code": "MDW"
+    },
+    {
+        "name": "Memphis International Airport",
+        "latitude": 35.04240036010742,
+        "longitude": -89.97669982910156,
+        "elevation": 341,
+        "country": "US",
+        "location": "Memphis",
+        "code": "MEM"
+    },
+    {
+        "name": "Dobbins Air Reserve Base",
+        "latitude": 33.91540146,
+        "longitude": -84.51629639,
+        "elevation": 1068,
+        "country": "US",
+        "location": "Marietta",
+        "code": "MGE"
+    },
+    {
+        "name": "Montgomery Regional (Dannelly Field) Airport",
+        "latitude": 32.30059814,
+        "longitude": -86.39399719,
+        "elevation": 221,
+        "country": "US",
+        "location": "Montgomery",
+        "code": "MGM"
+    },
+    {
+        "name": "Manchester Airport",
+        "latitude": 42.93259811401367,
+        "longitude": -71.43569946289062,
+        "elevation": 266,
+        "country": "US",
+        "location": "Manchester",
+        "code": "MHT"
+    },
+    {
+        "name": "Miami International Airport",
+        "latitude": 25.79319953918457,
+        "longitude": -80.29060363769531,
+        "elevation": 8,
+        "country": "US",
+        "location": "Miami",
+        "code": "MIA"
+    },
+    {
+        "name": "General Mitchell International Airport",
+        "latitude": 42.947200775146484,
+        "longitude": -87.89659881591797,
+        "elevation": 723,
+        "country": "US",
+        "location": "Milwaukee",
+        "code": "MKE"
+    },
+    {
+        "name": "Quad City International Airport",
+        "latitude": 41.44850158691406,
+        "longitude": -90.50749969482422,
+        "elevation": 590,
+        "country": "US",
+        "location": "Moline",
+        "code": "MLI"
+    },
+    {
+        "name": "Monroe Regional Airport",
+        "latitude": 32.51089859008789,
+        "longitude": -92.0376968383789,
+        "elevation": 79,
+        "country": "US",
+        "location": "Monroe",
+        "code": "MLU"
+    },
+    {
+        "name": "Mobile Regional Airport",
+        "latitude": 30.691200256348,
+        "longitude": -88.242797851562,
+        "elevation": 219,
+        "country": "US",
+        "location": "Mobile",
+        "code": "MOB"
+    },
+    {
+        "name": "Dane County Regional Truax Field",
+        "latitude": 43.13990020751953,
+        "longitude": -89.3375015258789,
+        "elevation": 887,
+        "country": "US",
+        "location": "Madison",
+        "code": "MSN"
+    },
+    {
+        "name": "Minneapolis-St Paul International/Wold-Chamberlain Airport",
+        "latitude": 44.881999969499994,
+        "longitude": -93.22180175780001,
+        "elevation": 841,
+        "country": "US",
+        "location": "Minneapolis",
+        "code": "MSP"
+    },
+    {
+        "name": "Louis Armstrong New Orleans International Airport",
+        "latitude": 29.99340057373047,
+        "longitude": -90.25800323486328,
+        "elevation": 4,
+        "country": "US",
+        "location": "New Orleans",
+        "code": "MSY"
+    },
+    {
+        "name": "Mountain Home Air Force Base",
+        "latitude": 43.043598,
+        "longitude": -115.872002,
+        "elevation": 2996,
+        "country": "US",
+        "location": "Mountain Home",
+        "code": "MUO"
+    },
+    {
+        "name": "Metropolitan Oakland International Airport",
+        "latitude": 37.72129821777344,
+        "longitude": -122.22100067138672,
+        "elevation": 9,
+        "country": "US",
+        "location": "Oakland",
+        "code": "OAK"
+    },
+    {
+        "name": "Will Rogers World Airport",
+        "latitude": 35.39310073852539,
+        "longitude": -97.60070037841797,
+        "elevation": 1295,
+        "country": "US",
+        "location": "Oklahoma City",
+        "code": "OKC"
+    },
+    {
+        "name": "Ontario International Airport",
+        "latitude": 34.055999755859375,
+        "longitude": -117.60099792480469,
+        "elevation": 944,
+        "country": "US",
+        "location": "Ontario",
+        "code": "ONT"
+    },
+    {
+        "name": "Chicago O'Hare International Airport",
+        "latitude": 41.97859955,
+        "longitude": -87.90480042,
+        "elevation": 672,
+        "country": "US",
+        "location": "Chicago",
+        "code": "ORD"
+    },
+    {
+        "name": "Norfolk International Airport",
+        "latitude": 36.89459991455078,
+        "longitude": -76.20120239257812,
+        "elevation": 26,
+        "country": "US",
+        "location": "Norfolk",
+        "code": "ORF"
+    },
+    {
+        "name": "Tyndall Air Force Base",
+        "latitude": 30.0695991516,
+        "longitude": -85.57540130619999,
+        "elevation": 17,
+        "country": "US",
+        "location": "Panama City",
+        "code": "PAM"
+    },
+    {
+        "name": "Palm Beach International Airport",
+        "latitude": 26.68320083618164,
+        "longitude": -80.09559631347656,
+        "elevation": 19,
+        "country": "US",
+        "location": "West Palm Beach",
+        "code": "PBI"
+    },
+    {
+        "name": "Portland International Airport",
+        "latitude": 45.58869934,
+        "longitude": -122.5979996,
+        "elevation": 31,
+        "country": "US",
+        "location": "Portland",
+        "code": "PDX"
+    },
+    {
+        "name": "Newport News Williamsburg International Airport",
+        "latitude": 37.13190079,
+        "longitude": -76.49299622,
+        "elevation": 42,
+        "country": "US",
+        "location": "Newport News",
+        "code": "PHF"
+    },
+    {
+        "name": "Philadelphia International Airport",
+        "latitude": 39.87189865112305,
+        "longitude": -75.24109649658203,
+        "elevation": 36,
+        "country": "US",
+        "location": "Philadelphia",
+        "code": "PHL"
+    },
+    {
+        "name": "Phoenix Sky Harbor International Airport",
+        "latitude": 33.43429946899414,
+        "longitude": -112.01200103759766,
+        "elevation": 1135,
+        "country": "US",
+        "location": "Phoenix",
+        "code": "PHX"
+    },
+    {
+        "name": "General Wayne A. Downing Peoria International Airport",
+        "latitude": 40.664199829100006,
+        "longitude": -89.6932983398,
+        "elevation": 660,
+        "country": "US",
+        "location": "Peoria",
+        "code": "PIA"
+    },
+    {
+        "name": "Pittsburgh International Airport",
+        "latitude": 40.49150085,
+        "longitude": -80.23290253,
+        "elevation": 1203,
+        "country": "US",
+        "location": "Pittsburgh",
+        "code": "PIT"
+    },
+    {
+        "name": "Portland International Jetport Airport",
+        "latitude": 43.64619827,
+        "longitude": -70.30930328,
+        "elevation": 76,
+        "country": "US",
+        "location": "Portland",
+        "code": "PWM"
+    },
+    {
+        "name": "Raleigh Durham International Airport",
+        "latitude": 35.877601623535156,
+        "longitude": -78.7874984741211,
+        "elevation": 435,
+        "country": "US",
+        "location": "Raleigh/Durham",
+        "code": "RDU"
+    },
+    {
+        "name": "Chicago Rockford International Airport",
+        "latitude": 42.19540023803711,
+        "longitude": -89.09719848632812,
+        "elevation": 742,
+        "country": "US",
+        "location": "Chicago/Rockford",
+        "code": "RFD"
+    },
+    {
+        "name": "Richmond International Airport",
+        "latitude": 37.50519943237305,
+        "longitude": -77.3197021484375,
+        "elevation": 167,
+        "country": "US",
+        "location": "Richmond",
+        "code": "RIC"
+    },
+    {
+        "name": "Randolph Air Force Base",
+        "latitude": 29.52969933,
+        "longitude": -98.27890015,
+        "elevation": 761,
+        "country": "US",
+        "location": "Universal City",
+        "code": "RND"
+    },
+    {
+        "name": "Reno Tahoe International Airport",
+        "latitude": 39.49909973144531,
+        "longitude": -119.76799774169922,
+        "elevation": 4415,
+        "country": "US",
+        "location": "Reno",
+        "code": "RNO"
+    },
+    {
+        "name": "Roanoke–Blacksburg Regional Airport",
+        "latitude": 37.325500488299994,
+        "longitude": -79.975402832,
+        "elevation": 1175,
+        "country": "US",
+        "location": "Roanoke",
+        "code": "ROA"
+    },
+    {
+        "name": "Greater Rochester International Airport",
+        "latitude": 43.118900299072266,
+        "longitude": -77.67240142822266,
+        "elevation": 559,
+        "country": "US",
+        "location": "Rochester",
+        "code": "ROC"
+    },
+    {
+        "name": "Rochester International Airport",
+        "latitude": 43.90829849243164,
+        "longitude": -92.5,
+        "elevation": 1317,
+        "country": "US",
+        "location": "Rochester",
+        "code": "RST"
+    },
+    {
+        "name": "Southwest Florida International Airport",
+        "latitude": 26.53619956970215,
+        "longitude": -81.75520324707031,
+        "elevation": 30,
+        "country": "US",
+        "location": "Fort Myers",
+        "code": "RSW"
+    },
+    {
+        "name": "San Diego International Airport",
+        "latitude": 32.7336006165,
+        "longitude": -117.190002441,
+        "elevation": 17,
+        "country": "US",
+        "location": "San Diego",
+        "code": "SAN"
+    },
+    {
+        "name": "San Antonio International Airport",
+        "latitude": 29.533700942993164,
+        "longitude": -98.46980285644531,
+        "elevation": 809,
+        "country": "US",
+        "location": "San Antonio",
+        "code": "SAT"
+    },
+    {
+        "name": "Savannah Hilton Head International Airport",
+        "latitude": 32.12760162,
+        "longitude": -81.20210266,
+        "elevation": 50,
+        "country": "US",
+        "location": "Savannah",
+        "code": "SAV"
+    },
+    {
+        "name": "South Bend Regional Airport",
+        "latitude": 41.70869827270508,
+        "longitude": -86.31729888916016,
+        "elevation": 799,
+        "country": "US",
+        "location": "South Bend",
+        "code": "SBN"
+    },
+    {
+        "name": "Louisville International Standiford Field",
+        "latitude": 38.1744,
+        "longitude": -85.736,
+        "elevation": 501,
+        "country": "US",
+        "location": "Louisville",
+        "code": "SDF"
+    },
+    {
+        "name": "Seattle Tacoma International Airport",
+        "latitude": 47.44900131225586,
+        "longitude": -122.30899810791016,
+        "elevation": 433,
+        "country": "US",
+        "location": "Seattle",
+        "code": "SEA"
+    },
+    {
+        "name": "Orlando Sanford International Airport",
+        "latitude": 28.777599334716797,
+        "longitude": -81.23750305175781,
+        "elevation": 55,
+        "country": "US",
+        "location": "Orlando",
+        "code": "SFB"
+    },
+    {
+        "name": "San Francisco International Airport",
+        "latitude": 37.61899948120117,
+        "longitude": -122.375,
+        "elevation": 13,
+        "country": "US",
+        "location": "San Francisco",
+        "code": "SFO"
+    },
+    {
+        "name": "Springfield Branson National Airport",
+        "latitude": 37.24570084,
+        "longitude": -93.38860321,
+        "elevation": 1268,
+        "country": "US",
+        "location": "Springfield",
+        "code": "SGF"
+    },
+    {
+        "name": "Shreveport Regional Airport",
+        "latitude": 32.44660186767578,
+        "longitude": -93.82559967041016,
+        "elevation": 258,
+        "country": "US",
+        "location": "Shreveport",
+        "code": "SHV"
+    },
+    {
+        "name": "Norman Y. Mineta San Jose International Airport",
+        "latitude": 37.36259841918945,
+        "longitude": -121.92900085449219,
+        "elevation": 62,
+        "country": "US",
+        "location": "San Jose",
+        "code": "SJC"
+    },
+    {
+        "name": "Fairchild Air Force Base",
+        "latitude": 47.6151008606,
+        "longitude": -117.65599823,
+        "elevation": 2461,
+        "country": "US",
+        "location": "Spokane",
+        "code": "SKA"
+    },
+    {
+        "name": "Salt Lake City International Airport",
+        "latitude": 40.78839874267578,
+        "longitude": -111.97799682617188,
+        "elevation": 4227,
+        "country": "US",
+        "location": "Salt Lake City",
+        "code": "SLC"
+    },
+    {
+        "name": "Sacramento International Airport",
+        "latitude": 38.69540023803711,
+        "longitude": -121.59100341796875,
+        "elevation": 27,
+        "country": "US",
+        "location": "Sacramento",
+        "code": "SMF"
+    },
+    {
+        "name": "John Wayne Airport-Orange County Airport",
+        "latitude": 33.67570114,
+        "longitude": -117.8679962,
+        "elevation": 56,
+        "country": "US",
+        "location": "Santa Ana",
+        "code": "SNA"
+    },
+    {
+        "name": "Abraham Lincoln Capital Airport",
+        "latitude": 39.84410095,
+        "longitude": -89.67790222,
+        "elevation": 598,
+        "country": "US",
+        "location": "Springfield",
+        "code": "SPI"
+    },
+    {
+        "name": "Sheppard Air Force Base-Wichita Falls Municipal Airport",
+        "latitude": 33.98880005,
+        "longitude": -98.49189758,
+        "elevation": 1019,
+        "country": "US",
+        "location": "Wichita Falls",
+        "code": "SPS"
+    },
+    {
+        "name": "Sarasota Bradenton International Airport",
+        "latitude": 27.39539909362793,
+        "longitude": -82.55439758300781,
+        "elevation": 30,
+        "country": "US",
+        "location": "Sarasota/Bradenton",
+        "code": "SRQ"
+    },
+    {
+        "name": "Shaw Air Force Base",
+        "latitude": 33.97269821,
+        "longitude": -80.47059631,
+        "elevation": 241,
+        "country": "US",
+        "location": "Sumter",
+        "code": "SSC"
+    },
+    {
+        "name": "Lambert St Louis International Airport",
+        "latitude": 38.74869918823242,
+        "longitude": -90.37000274658203,
+        "elevation": 618,
+        "country": "US",
+        "location": "St Louis",
+        "code": "STL"
+    },
+    {
+        "name": "Spirit of St Louis Airport",
+        "latitude": 38.662101745605,
+        "longitude": -90.652000427246,
+        "elevation": 463,
+        "country": "US",
+        "location": "St Louis",
+        "code": "SUS"
+    },
+    {
+        "name": "Travis Air Force Base",
+        "latitude": 38.262699127197,
+        "longitude": -121.92700195312,
+        "elevation": 62,
+        "country": "US",
+        "location": "Fairfield",
+        "code": "SUU"
+    },
+    {
+        "name": "Sioux Gateway Col. Bud Day Field",
+        "latitude": 42.40259933,
+        "longitude": -96.38439941,
+        "elevation": 1098,
+        "country": "US",
+        "location": "Sioux City",
+        "code": "SUX"
+    },
+    {
+        "name": "Syracuse Hancock International Airport",
+        "latitude": 43.11119842529297,
+        "longitude": -76.1063003540039,
+        "elevation": 421,
+        "country": "US",
+        "location": "Syracuse",
+        "code": "SYR"
+    },
+    {
+        "name": "Whiteman Air Force Base",
+        "latitude": 38.73030090332,
+        "longitude": -93.547897338867,
+        "elevation": 870,
+        "country": "US",
+        "location": "Knob Noster",
+        "code": "SZL"
+    },
+    {
+        "name": "McChord Air Force Base",
+        "latitude": 47.1376991272,
+        "longitude": -122.475997925,
+        "elevation": 322,
+        "country": "US",
+        "location": "Tacoma",
+        "code": "TCM"
+    },
+    {
+        "name": "Tinker Air Force Base",
+        "latitude": 35.414699554443,
+        "longitude": -97.386596679688,
+        "elevation": 1291,
+        "country": "US",
+        "location": "Oklahoma City",
+        "code": "TIK"
+    },
+    {
+        "name": "Tallahassee Regional Airport",
+        "latitude": 30.396499633789062,
+        "longitude": -84.35030364990234,
+        "elevation": 81,
+        "country": "US",
+        "location": "Tallahassee",
+        "code": "TLH"
+    },
+    {
+        "name": "Toledo Express Airport",
+        "latitude": 41.58679962,
+        "longitude": -83.80780029,
+        "elevation": 683,
+        "country": "US",
+        "location": "Toledo",
+        "code": "TOL"
+    },
+    {
+        "name": "Tampa International Airport",
+        "latitude": 27.975500106811523,
+        "longitude": -82.533203125,
+        "elevation": 26,
+        "country": "US",
+        "location": "Tampa",
+        "code": "TPA"
+    },
+    {
+        "name": "Tri Cities Regional Tn Va Airport",
+        "latitude": 36.47520065307617,
+        "longitude": -82.40740203857422,
+        "elevation": 1519,
+        "country": "US",
+        "location": "Bristol/Johnson/Kingsport",
+        "code": "TRI"
+    },
+    {
+        "name": "Tulsa International Airport",
+        "latitude": 36.19839859008789,
+        "longitude": -95.88809967041016,
+        "elevation": 677,
+        "country": "US",
+        "location": "Tulsa",
+        "code": "TUL"
+    },
+    {
+        "name": "Tucson International Airport",
+        "latitude": 32.1161003112793,
+        "longitude": -110.94100189208984,
+        "elevation": 2643,
+        "country": "US",
+        "location": "Tucson",
+        "code": "TUS"
+    },
+    {
+        "name": "McGhee Tyson Airport",
+        "latitude": 35.81100082,
+        "longitude": -83.9940033,
+        "elevation": 981,
+        "country": "US",
+        "location": "Knoxville",
+        "code": "TYS"
+    },
+    {
+        "name": "Vandenberg Air Force Base",
+        "latitude": 34.7373008728,
+        "longitude": -120.583999634,
+        "elevation": 369,
+        "country": "US",
+        "location": "Lompoc",
+        "code": "VBG"
+    },
+    {
+        "name": "Destin-Ft Walton Beach Airport",
+        "latitude": 30.4832,
+        "longitude": -86.525398,
+        "elevation": 87,
+        "country": "US",
+        "location": "Valparaiso",
+        "code": "VPS"
+    },
+    {
+        "name": "Robins Air Force Base",
+        "latitude": 32.6400985718,
+        "longitude": -83.5919036865,
+        "elevation": 294,
+        "country": "US",
+        "location": "Warner Robins",
+        "code": "WRB"
+    },
+    {
+        "name": "Bari Karol Wojtyła Airport",
+        "latitude": 41.138901,
+        "longitude": 16.760599,
+        "elevation": 177,
+        "country": "IT",
+        "location": "Bari",
+        "code": "BA02"
+    },
+    {
+        "name": "Catania-Fontanarossa Airport",
+        "latitude": 37.466801,
+        "longitude": 15.0664,
+        "elevation": 39,
+        "country": "IT",
+        "location": "Catania",
+        "code": "CT03"
+    },
+    {
+        "name": "Falcone–Borsellino Airport",
+        "latitude": 38.175999,
+        "longitude": 13.091,
+        "elevation": 65,
+        "country": "IT",
+        "location": "Palermo",
+        "code": "PA03"
+    },
+    {
+        "name": "Cagliari Elmas Airport",
+        "latitude": 39.251499,
+        "longitude": 9.05428,
+        "elevation": 13,
+        "country": "IT",
+        "location": "Cagliari",
+        "code": "CA07"
+    },
+    {
+        "name": "Malpensa International Airport",
+        "latitude": 45.6306,
+        "longitude": 8.72811,
+        "elevation": 768,
+        "country": "IT",
+        "location": "Milan",
+        "code": "MI12"
+    },
+    {
+        "name": "Il Caravaggio International Airport",
+        "latitude": 45.673901,
+        "longitude": 9.70417,
+        "elevation": 782,
+        "country": "IT",
+        "location": "Bergamo",
+        "code": "BG01"
+    },
+    {
+        "name": "Turin Airport",
+        "latitude": 45.200802,
+        "longitude": 7.64963,
+        "elevation": 989,
+        "country": "IT",
+        "location": "Torino",
+        "code": "TO11"
+    },
+    {
+        "name": "Genoa Cristoforo Colombo Airport",
+        "latitude": 44.4133,
+        "longitude": 8.8375,
+        "elevation": 13,
+        "country": "IT",
+        "location": "Genova",
+        "code": "GE01"
+    },
+    {
+        "name": "Milano Linate Airport",
+        "latitude": 45.445099,
+        "longitude": 9.27674,
+        "elevation": 353,
+        "country": "IT",
+        "location": "Milan",
+        "code": "MI11"
+    },
+    {
+        "name": "Bologna Guglielmo Marconi Airport",
+        "latitude": 44.5354,
+        "longitude": 11.2887,
+        "elevation": 123,
+        "country": "IT",
+        "location": "Bologna",
+        "code": "BO08"
+    },
+    {
+        "name": "Treviso-Sant'Angelo Airport",
+        "latitude": 45.648399,
+        "longitude": 12.1944,
+        "elevation": 59,
+        "country": "IT",
+        "location": "Treviso",
+        "code": "TV01"
+    },
+    {
+        "name": "Verona Villafranca Airport",
+        "latitude": 45.395699,
+        "longitude": 10.8885,
+        "elevation": 239,
+        "country": "IT",
+        "location": "Verona",
+        "code": "VR10"
+    },
+    {
+        "name": "Venice Marco Polo Airport",
+        "latitude": 45.505299,
+        "longitude": 12.3519,
+        "elevation": 7,
+        "country": "IT",
+        "location": "Venice",
+        "code": "VE05"
+    },
+    {
+        "name": "Ciampino–G. B. Pastine International Airport",
+        "latitude": 41.7994,
+        "longitude": 12.5949,
+        "elevation": 427,
+        "country": "IT",
+        "location": "Roma",
+        "code": "RM12"
+    },
+    {
+        "name": "Leonardo da Vinci–Fiumicino Airport",
+        "latitude": 41.8002778,
+        "longitude": 12.2388889,
+        "elevation": 13,
+        "country": "IT",
+        "location": "Rome",
+        "code": "RM11"
+    },
+    {
+        "name": "Naples International Airport",
+        "latitude": 40.886002,
+        "longitude": 14.2908,
+        "elevation": 294,
+        "country": "IT",
+        "location": "Nápoli",
+        "code": "NA01"
+    },
+    {
+        "name": "Pisa International Airport",
+        "latitude": 43.683899,
+        "longitude": 10.3927,
+        "elevation": 6,
+        "country": "IT",
+        "location": "Pisa",
+        "code": "PI05"
+    },
+    {
+        "name": "Licenciado Benito Juarez International Airport",
+        "latitude": 19.4363,
+        "longitude": -99.072098,
+        "elevation": 7316,
+        "country": "MX",
+        "location": "Mexico City",
+        "code": "AICM"
+    },
+    {
+        "name": "Fairbanks International Airport",
+        "latitude": 64.81510162,
+        "longitude": -147.8560028,
+        "elevation": 439,
+        "country": "US",
+        "location": "Fairbanks",
+        "code": "FAI"
+    },
+    {
+        "name": "Ted Stevens Anchorage International Airport",
+        "latitude": 61.174400329589844,
+        "longitude": -149.99600219726562,
+        "elevation": 152,
+        "country": "US",
+        "location": "Anchorage",
+        "code": "ANC"
+    },
+    {
+        "name": "Antonio B. Won Pat International Airport",
+        "latitude": 13.4834003448,
+        "longitude": 144.796005249,
+        "elevation": 298,
+        "country": "GU",
+        "location": "Hagåtña,",
+        "code": ""
+    },
+    {
+        "name": "Honolulu International Airport",
+        "latitude": 21.318700790405273,
+        "longitude": -157.9219970703125,
+        "elevation": 13,
+        "country": "US",
+        "location": "Honolulu",
+        "code": "HNL"
+    },
+    {
+        "name": "Ukrainka Air Base",
+        "latitude": 51.169997,
+        "longitude": 128.445007,
+        "elevation": 771,
+        "country": "RU",
+        "location": "Belogorsk",
+        "code": "XHBU"
+    },
+    {
+        "name": "Olenya Air Base",
+        "latitude": 68.151802062988,
+        "longitude": 33.463901519775,
+        "elevation": 702,
+        "country": "RU",
+        "location": "Olenegorsk",
+        "code": "XLMO"
+    },
+    {
+        "name": "Ministro Pistarini International Airport",
+        "latitude": -34.8222,
+        "longitude": -58.5358,
+        "elevation": 67,
+        "country": "AR",
+        "location": "Buenos Aires",
+        "code": "EZE"
+    },
+    {
+        "name": "Mariscal Sucre International Airport",
+        "latitude": -0.129166666667,
+        "longitude": -78.3575,
+        "elevation": 7841,
+        "country": "EC",
+        "location": "Quito",
+        "code": "UIO"
+    },
+    {
+        "name": "El Dorado International Airport",
+        "latitude": 4.70159,
+        "longitude": -74.1469,
+        "elevation": 8361,
+        "country": "CO",
+        "location": "Bogota",
+        "code": "BOG"
+    },
+    {
+        "name": "Luis Munoz Marin International Airport",
+        "latitude": 18.4393997192,
+        "longitude": -66.0018005371,
+        "elevation": 9,
+        "country": "PR",
+        "location": "San Juan",
+        "code": "SJU"
+    },
+    {
+        "name": "Chkalovskiy Airport",
+        "latitude": 55.8782997131,
+        "longitude": 38.0616989136,
+        "elevation": 499,
+        "country": "RU",
+        "location": "Moscow",
+        "code": "UUM1"
+    },
+    {
+        "name": "Mattala Rajapaksa International Airport",
+        "latitude": 6.284467,
+        "longitude": 81.124128,
+        "elevation": 157,
+        "country": "LK",
+        "location": "",
+        "code": "VCRI"
+    }
+]
