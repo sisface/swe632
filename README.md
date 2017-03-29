@@ -6,7 +6,9 @@ SOFTWARE NEEDED
 - npm
 
 SETUP
-- run: `npm install`
+- Run: `npm install`.
+- TODO: Add command for ingesting MongoDB data.  (Note: only do this once).
 
 TO RUN
-- run: `node server.js`
+- Run: `mongod`.
+- Run: `node server.js`.
