@@ -6,6 +6,7 @@
 var express    = require('express');        // Call express.
 var app        = express();                 // Define app using express.
 var bodyParser = require('body-parser');
+var path = require('path');                 // Needed to serve static content.
 
 // Configure app to use bodyParser() to get the data from a POST.
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,7 +20,7 @@ var router = express.Router();              // Get an instance of the express Ro
 
 // REGISTER ROUTES
 // All routes are prefixed with /api.
-app.use('/api', router);
+app.use('/', router);
 
 // START THE SERVER
 app.listen(port);
@@ -68,14 +69,19 @@ function airportById(req, res) {
 
 //ROUTE DEFINITIONS
 
+// Serve up main site page.
+router.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
+
 // Test route to make sure everything is working (accessed at GET
 // http://localhost:8080/api).
-router.get('/test', function(req, res) {
+router.get('/api/test', function(req, res) {
     res.json({ message: 'Test.' });
 });
 
 // Endpoint to get all airports.
-router.get('/airport', allAirports);
+router.get('/api/airport', allAirports);
 
 // Endpoint to get one airport, by _id.
-router.get('/airport/:id', airportById);
+router.get('/api/airport/:id', airportById);
