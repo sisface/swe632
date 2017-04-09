@@ -1,5 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      TODO: Add site title
+    </title>
+  </head>
   <body>
-    <h1>hi there</h1>
+    <script src="https://unpkg.com/mithril/mithril.js"></script>
+    <script>
+     var root = document.body;
+
+     var Hello = {
+       view: function() {
+         return m("main", [
+           m("h1", {class: "title"}, "My first app"),
+           m("button", "A button"),
+         ])
+       }
+     }
+
+     mount(root, Hello);
+     /*
+      *      var Splash.view = function() {
+      *        return m('a', {href: '#!/hello'}, 'Enter!');
+      *      };
+      *
+      *      m.route(root, '/splash',
+      *              {'/splash': Splash,
+      *               '/hello': Hello});
+      * */
+    </script>
   </body>
 </html>
