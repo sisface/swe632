@@ -74,6 +74,8 @@ router.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
+app.use(express.static('.'));
+
 // Test route to make sure everything is working (accessed at GET
 // http://localhost:8080/api).
 router.get('/api/test', function(req, res) {

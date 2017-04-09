@@ -2,8 +2,9 @@
 <html lang='en'>
   <head>
     <meta charset='UTF-8' />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
     <title>
-      TODO: Add site title
+      Macroexpand Travel: Buy Plane Tickets Online!
     </title>
   </head>
   <body>
@@ -16,7 +17,7 @@
      function getEdmonton() {
        m.request({
          method: 'GET',
-         url: 'http://localhost:8080/api/airport/' + '58e9af969b4b4d049f66e476',
+         url: 'http://localhost:8080/api/airport/' + '58db1d4f0020077da7ef5a3d',
          withCredentials: true
        }).then(function(result) {
             edmonton = result;
@@ -37,9 +38,23 @@
        }
      };
 
+     var uri = "./img/imagea.jpg";
+     var res = encodeURI(uri);
+
      var Splash = {
        view: function() {
-         return m('a', {href: '#!/mainPage'}, 'Enter!');
+         return ('main', [
+           m('img[src="img/imagea.jpg"]', {class: 'banner-img'} ),
+         m('div', {id: 'container'},
+           m('header', {class: 'header'},
+             m('h1', {class: 'header-h1'}, 'Macroexpand Travel, Inc.'))),                   
+         m('div', {id: 'splash-div'},
+            m('button', {onclick: 
+              function() {
+                m.route.set('/mainPage', null, null);
+              },
+            class: 'btn'}, 'Search Flights!')),
+         ]);
        }
      };
 
