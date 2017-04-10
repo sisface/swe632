@@ -22,6 +22,10 @@ header-p {
 	text-align: justify;
 }
 
+h2 {
+    color: white;
+}
+
 #container {
 	width: 99%;
     height: 99%;
