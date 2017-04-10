@@ -30,10 +30,10 @@
          return m('main', [
            m('h2', {class: 'title'}, 'My first app'),
            m('button', 'A button'),
-           m('h2', 'Name: ', edmonton.name),
-           m('h2', 'Country: ', edmonton.country),
-           m('h2', 'Location: ', edmonton.location),
-           m('h2', 'Code: ', edmonton.code),
+           m('p', 'Name: ', edmonton.name),
+           m('p', 'Country: ', edmonton.country),
+           m('p', 'Location: ', edmonton.location),
+           m('p', 'Code: ', edmonton.code),
          ]);
        }
      };
@@ -46,7 +46,7 @@
          return ('main', [
          m('div', {id: 'container'},
            m('header', {class: 'header'},
-             m('h1', {class: 'header-h1'}, 'Macroexpand Travel, Inc.'),
+             m('header-h1', {class: 'header-h1'}, 'Macroexpand Travel, Inc.'),
              m('p', {class: 'header-p'}, 'Reserve flights and purchase plane tickets online!')),
          m('div', {class: 'photobanner'},
           m('img[src="img/image-a.JPG"]', {class: 'banner-img'}),
