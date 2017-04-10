@@ -44,16 +44,25 @@
      var Splash = {
        view: function() {
          return ('main', [
-           m('img[src="img/imagea.jpg"]', {class: 'banner-img'} ),
          m('div', {id: 'container'},
            m('header', {class: 'header'},
-             m('h1', {class: 'header-h1'}, 'Macroexpand Travel, Inc.'))),                   
-         m('div', {id: 'splash-div'},
-            m('button', {onclick: 
+             m('h1', {class: 'header-h1'}, 'Macroexpand Travel, Inc.'),
+             m('p', {class: 'header-p'}, 'Reserve flights and purchase plane tickets online!')),
+         m('div', {class: 'photobanner'},
+          m('img[src="img/image-a.JPG"]', {class: 'banner-img'}),
+          m('img[src="img/image-b.JPG"]'),
+          m('img[src="img/image-c.JPG"]'), 
+          m('img[src="img/image-d.JPG"]'),
+          m('img[src="img/image-e.JPG"]'),
+          m('img[src="img/image-f.JPG"]'),
+          m('img[src="img/image-g.JPG"]'),
+          m('img[src="img/image-h.JPG"]'),
+          m('img[src="img/image-i.JPG"]'),
+          m('img[src="img/image-j.JPG"]')),                      
+          m('button', {onclick: 
               function() {
                 m.route.set('/mainPage', null, null);
-              },
-            class: 'btn'}, 'Search Flights!')),
+              }, class: 'btn'}, 'Search Flights!')),
          ]);
        }
      };
