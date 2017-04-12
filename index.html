@@ -38,16 +38,13 @@
        }
      };
 
-     var uri = "./img/imagea.jpg";
-     var res = encodeURI(uri);
-
      var Splash = {
        view: function() {
          return ('main', [
          m('div', {id: 'container'},
            m('header', {class: 'header'},
              m('header-h1', {class: 'header-h1'}, 'Macroexpand Travel, Inc.'),
-             m('p', {class: 'header-p'}, 'Reserve flights and purchase plane tickets online!')),
+             m('p', {class: 'p-header'}, 'Discount online flight reservation booking and ticket purchases. Expand your horizons!')),
          m('div', {class: 'photobanner'},
           m('img[src="img/image-a.JPG"]', {class: 'banner-img'}),
           m('img[src="img/image-b.JPG"]'),
@@ -58,11 +55,20 @@
           m('img[src="img/image-g.JPG"]'),
           m('img[src="img/image-h.JPG"]'),
           m('img[src="img/image-i.JPG"]'),
-          m('img[src="img/image-j.JPG"]')),                      
+          m('img[src="img/image-j.JPG"]'),
+          m('img[src="img/image-a.JPG"]'),
+          m('img[src="img/image-b.JPG"]'),
+          m('img[src="img/image-c.JPG"]'),
+          m('img[src="img/image-d.JPG"]'),
+          m('img[src="img/image-e.JPG"]'),
+          m('img[src="img/image-f.JPG"]'),
+          m('img[src="img/image-g.JPG"]'),
+          m('img[src="img/image-h.JPG"]')), 
+          m('input[type=text][placeholder=Washington Dulles]'),                    
           m('button', {onclick: 
               function() {
                 m.route.set('/mainPage', null, null);
-              }, class: 'btn'}, 'Search Flights!')),
+              }, class: 'button'}, 'Search Flights!')),
          ]);
        }
      };
