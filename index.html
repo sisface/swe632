@@ -1,130 +1,157 @@
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
-    <title>
-      Macroexpand Travel: Buy Plane Tickets Online!
-    </title>
-  </head>
-  <body>
-    <script src='https://unpkg.com/mithril/mithril.js'></script>
-    <script type="text/javascript" src="jQuery-jquery-3.2.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-    $( function() {
-     var dateFormat = "mm/dd/yy",
-        from = $( "#from" )
+
+<head>
+  <meta charset='UTF-8' />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <title>
+    Macroexpand Travel: Buy Plane Tickets Online!
+  </title>
+</head>
+
+<body>
+  <script src='https://unpkg.com/mithril/mithril.js'></script>
+  <script type="text/javascript" src="jQuery-jquery-3.2.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      var dateFormat = "mm/dd/yy",
+        from = $("#from")
           .datepicker({
             defaultDate: "+1w",
             changeMonth: true,
             numberOfMonths: 3
-         })
-          .on( "change", function() {
-            to.datepicker( "option", "minDate", getDate( this ) );
+          })
+          .on("change", function () {
+            to.datepicker("option", "minDate", getDate(this));
           }),
-        to = $( "#to" ).datepicker({
+        to = $("#to").datepicker({
           defaultDate: "+1w",
           changeMonth: true,
           numberOfMonths: 3
         })
-        .on( "change", function() {
-          from.datepicker( "option", "maxDate", getDate( this ) );
-        });
- 
-      function getDate( element ) {
+          .on("change", function () {
+            from.datepicker("option", "maxDate", getDate(this));
+          });
+
+      function getDate(element) {
         var date;
         try {
-          date = $.datepicker.parseDate( dateFormat, element.value );
-        } catch( error ) {
+          date = $.datepicker.parseDate(dateFormat, element.value);
+        } catch (error) {
           date = null;
         }
- 
+
         return date;
       }
-    } );
-    </script>
-    <script>
-     var root = document.body;
+    });
+  </script>
+  <script>
+    var root = document.body;
 
-     // TODO: Replace this test query.  The MongoID won't match on your system.
-     var edmonton = {};
-     function getEdmonton() {
-       m.request({
-         method: 'GET',
-         url: 'http://localhost:8080/api/airport/' + '58db1d4f0020077da7ef5a3d',
-         withCredentials: true
-       }).then(function(result) {
-            edmonton = result;
-        });
-     }
-     getEdmonton();
+    // TODO: Replace this test query.  The MongoID won't match on your system.
+    var edmonton = {};
+    function getEdmonton() {
+      m.request({
+        method: 'GET',
+        url: 'http://localhost:8080/api/airport/' + '58db1d4f0020077da7ef5a3d',
+        withCredentials: true
+      }).then(function (result) {
+        edmonton = result;
+      });
+    }
+    getEdmonton();
 
-     var MainPage = {
-       view: function() {
-         return m('main', [
-          m('div', {id: 'container'},
-           m('header', {class: 'header'},
-             m('header-h1', {class: 'header-h1'}, 'Macroexpand Travel, Inc.'),
-             m('p', {class: 'p-header'}, 'Expand your horizons')),
-           m('div', {class: 'content'},
-              m('p', 'Select Dates'),              
-              m('div', {id: 'searchdiv'},         
-                m('label', {id: 'from'}, 'Departure: '),
-                  m('input', {id: 'from'}, 'from'),
-                m('label', {id: 'to'}, ' Arrival: '),
-                  m('input', {id: 'to'}, 'to'),
-              m('br')), 
-             m('p', 'Select Airports'),
-             m('br'),   
-             m('p', 'Name: ', edmonton.name),
-             m('p', 'Country: ', edmonton.country),
-             m('p', 'Location: ', edmonton.location),
-             m('p', 'Code: ', edmonton.code)))
-         ]);
-       }
-     };
+    var MainPage = {
+      view: function () {
+        return m('main', [
+          m('div', { id: 'container' },
+            m('header', { class: 'header' },
+              m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
+              m('p', { class: 'p-header' }, 'Expand your horizons!')),
+            m('hr'),
+            m('hr:after'),
+            m('div', { id: 'content' },
+              m('h2', 'Select Dates'),
+              m('div', { id: 'pickerdiv' },
+                m('label', { id: 'from' }, 'Departure: '),
+                m('input', { id: 'from' }, 'from'),
+                m('label', { id: 'to' }, ' Arrival: '),
+                m('input', { id: 'to' }, 'to'),
+                m('br')),
+              m('h2', 'Select Airports'),
+              m('br'),
+              m('div', { id: 'pickerdiv' },
+                m('label', { id: 'from' }, 'Departure: '),
+                m('input', { id: 'from' }, 'from'),
+                m('label', { id: 'to' }, ' Arrival: '),
+                m('input', { id: 'to' }, 'to'),
+                m('br')),
+              m('p', 'Name: ', edmonton.name),
+              m('p', 'Country: ', edmonton.country),
+              m('p', 'Location: ', edmonton.location),
+              m('p', 'Code: ', edmonton.code)),
+              m('h2', 'Number of Seats'),
+              m('br'),
+              m('h2', 'Luxury'),
+              m('br'),              
+              m('div', { id: 'searchdiv' },
+              m('button', {onclick:
+                function () {
+                  m.route.set('/mainPage', null, null);
+                }, class: 'button2'
+              }, 'Search Flights!')))
+        ]);
+      }
+    };
 
-     var Splash = {
-       view: function() {
-         return ('main', [
-         m('div', {id: 'container'},
-           m('header', {class: 'header'},
-             m('header-h1', {class: 'header-h1'}, 'Macroexpand Travel, Inc.'),
-             m('p', {class: 'p-header'}, 'Discount online flight reservation booking and ticket purchases. Expand your horizons!')),
-         m('div', {class: 'photobanner'},
-          m('img[src="img/image-a.JPG"]', {class: 'banner-img'}),
-          m('img[src="img/image-b.JPG"]'),
-          m('img[src="img/image-c.JPG"]'),
-          m('img[src="img/image-d.JPG"]'),
-          m('img[src="img/image-e.JPG"]'),
-          m('img[src="img/image-f.JPG"]'),
-          m('img[src="img/image-g.JPG"]'),
-          m('img[src="img/image-h.JPG"]'),
-          m('img[src="img/image-i.JPG"]'),
-          m('img[src="img/image-j.JPG"]'),
-          m('img[src="img/image-a.JPG"]'),
-          m('img[src="img/image-b.JPG"]'),
-          m('img[src="img/image-c.JPG"]'),
-          m('img[src="img/image-d.JPG"]'),
-          m('img[src="img/image-e.JPG"]'),
-          m('img[src="img/image-f.JPG"]'),
-          m('img[src="img/image-g.JPG"]'),
-          m('img[src="img/image-h.JPG"]')),
-          m('div', {id: 'searchdiv'},
-            m('input', {class: 'search'}, 'input[type=text]'),
-            m('button', {onclick:
-              function() {
-                m.route.set('/mainPage', null, null);
-              }, class: 'button'}, 'Search Flights!'))),
-         ]);
-       }
-     };
+    var Splash = {
+      view: function () {
+        return ('main', [
+          m('div', { id: 'container' },
+            m('header', { class: 'header' },
+              m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
+              m('p', { class: 'p-header' }, 'Expand your horizons!')),
+            m('hr'),
+            m('hr:after'),  
+            m('p', { class: 'p1' }, 'Discount online flight reservation booking and ticket purchases. Choose from hundreds of participating airlines from across the globe!'),
+            m('br'),
+            m('div', { class: 'photobanner' },
+              m('img[src="img/image-a.JPG"]', { class: 'banner-img' }),
+              m('img[src="img/image-b.JPG"]'),
+              m('img[src="img/image-c.JPG"]'),
+              m('img[src="img/image-d.JPG"]'),
+              m('img[src="img/image-e.JPG"]'),
+              m('img[src="img/image-f.JPG"]'),
+              m('img[src="img/image-g.JPG"]'),
+              m('img[src="img/image-h.JPG"]'),
+              m('img[src="img/image-i.JPG"]'),
+              m('img[src="img/image-j.JPG"]'),
+              m('img[src="img/image-a.JPG"]'),
+              m('img[src="img/image-b.JPG"]'),
+              m('img[src="img/image-c.JPG"]'),
+              m('img[src="img/image-d.JPG"]'),
+              m('img[src="img/image-e.JPG"]'),
+              m('img[src="img/image-f.JPG"]'),
+              m('img[src="img/image-g.JPG"]'),
+              m('img[src="img/image-h.JPG"]')),
+            m('div', { id: 'searchdiv' },
+              m('input', { class: 'search' }, 'input[type=text]'),
+              m('button', {onclick:
+                function () {
+                  m.route.set('/mainPage', null, null);
+                }, class: 'button'
+              }, 'Search Flights!'))),
+        ]);
+      }
+    };
 
-     m.route(root, '/splash',
-             {'/splash': Splash,
-              '/mainPage': MainPage});
+    m.route(root, '/splash',
+      {
+        '/splash': Splash,
+        '/mainPage': MainPage
+      });
+  </script>
+</body>
 
-    </script>
-  </body>
 </html>
