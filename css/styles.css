@@ -6,7 +6,6 @@ body {
 	background: black;
 }
 
-/*header*/
 header {
 	width: 800px;
 	margin: 40px auto;
@@ -16,11 +15,15 @@ header-h1 {
 	text-align: center;
 	font: 100 60px/1.5 Helvetica, Verdana, sans-serif;
 }
- 
+
 p {
-    color: grey;
-	font: 100 15px/1.5 Helvetica, Verdana, sans-serif;
-	text-align: justify;
+    color: black;
+	font: 100 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+ 
+.p-header {
+    color: dimgrey;
+	font: 100 20px/1.5 Helvetica, Verdana, sans-serif;
 }
 
 h2 {
@@ -29,12 +32,17 @@ h2 {
 }
 
 #container {
-	width: 99%;
+  	width: 99%;
     height: 99%;
-	overflow: hidden;
-	margin: 50px auto;
-	background: white;
+  	overflow: hidden;
+  	margin: 50px auto;
+  	background: white;
 }
+
+#searchdiv {
+    width:500px;
+    margin:50px auto;
+    }
 
 .banner-img {
     margin-left: auto;
@@ -81,10 +89,29 @@ h2 {
      transform: translateY(4px);
 }
 
+.search {
+     padding:8px 15px;
+     background:rgba(50, 50, 50, 0.2);
+     border:0px solid #dbdbdb;
+}
+.button {
+    position:relative;
+    padding:6px 15px;
+    left:-8px;
+    border:2px solid #207cca;
+    background-color:#207cca;
+    color:#fafafa;
+    margin-bottom: 50px;
+}
+.button:hover  {
+    background-color:#fafafa;
+    color:#207cca;
+}
+
 /*photobanner*/
 .photobanner {
 	height: 233px;
-	width: 3550px;
+	width: 7000px;
 	margin-bottom: 80px;
 }
  
@@ -94,6 +121,8 @@ h2 {
 	-o-transition: all 0.5s ease;
 	-ms-transition: all 0.5s ease;
 	transition: all 0.5s ease;
+    /*tells browser to use GPU*/ 
+    transform: translate3d(0, 0, 0);
 }
  
 .photobanner img:hover {
@@ -125,7 +154,7 @@ h2 {
     margin-left: 0px;
  }
  100% {
-    margin-left: -2125px;
+    margin-left: -3500px;
  } 
 }
  
@@ -134,7 +163,7 @@ h2 {
    margin-left: 0px;
  }
  100% {
-   margin-left: -2125px;
+   margin-left: -3500px;
  } 
 }
  
