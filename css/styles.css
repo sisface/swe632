@@ -17,11 +17,7 @@ header-h1 {
 }
 
 p {
-<<<<<<< HEAD
     color: black;
-=======
-    color: white;
->>>>>>> 8b1d3bda9671fc0b86cc98d87574b51e0f50d86f
 	font: 100 20px/1.5 Helvetica, Verdana, sans-serif;
 }
  
@@ -43,18 +39,9 @@ h2 {
   	background: white;
 }
 
-<<<<<<< HEAD
 #searchdiv {
     width:500px;
     margin:50px auto;
-=======
-searchdiv {
-    display: block; 
-    float: left; 
-    position: relative; 
-    right: 50%;
-    align-content: center;
->>>>>>> 8b1d3bda9671fc0b86cc98d87574b51e0f50d86f
     }
 
 .banner-img {
@@ -102,11 +89,7 @@ searchdiv {
      transform: translateY(4px);
 }
 
-<<<<<<< HEAD
 .search {
-=======
-search {
->>>>>>> 8b1d3bda9671fc0b86cc98d87574b51e0f50d86f
      padding:8px 15px;
      background:rgba(50, 50, 50, 0.2);
      border:0px solid #dbdbdb;
