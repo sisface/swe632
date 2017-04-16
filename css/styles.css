@@ -21,7 +21,8 @@ header-h1 {
 h2 {
     color: black;
   	font: Helvetica, Verdana, sans-serif;
-    background: lightblue;
+    background: lightgrey;
+    width: 75%;
 }
 
 p {
@@ -120,6 +121,36 @@ hr:after {
 .button:hover2  {
     background-color:#fafafa;
     color:#207cca;
+}
+
+/*advertisements*/
+
+#sidebar {
+  float: right;
+  padding-top: 15px;
+  color: #eee;
+  min-height: 650px;
+  min-width: 200px;
+}
+
+#banner {
+  position: relative;
+  padding: 15px;
+  color: #eee;
+}
+
+@media only screen and (max-width: 768px) {
+  #sidebar {
+    display: none;
+  }
+
+  #banner {
+    display: none;
+  }
+
+  #content {
+    margin-right: 0;
+  }
 }
 
 /*photobanner*/

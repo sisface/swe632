@@ -62,6 +62,36 @@
     }
     getEdmonton();
 
+    var CheckoutPage = {
+      view: function () {
+        return m('main', [
+          m('div', { id: 'container' },
+            m('header', { class: 'header' },
+              m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
+              m('p', { class: 'p-header' }, 'Expand your horizons!')),
+            m('hr'),
+            m('hr:after'),
+            m('div', { id: 'content' },
+              m('h2', 'Available Flights'),
+              m('div', { id: 'pickerdiv' },
+              m('p', 'Name: ', edmonton.name),
+              m('p', 'Country: ', edmonton.country),
+              m('p', 'Location: ', edmonton.location),
+              m('p', 'Code: ', edmonton.code)),
+              m('h2', 'Enter Customer Information'),
+              m('br')),              
+              m('div', { id: 'searchdiv' },
+              m('button', {onclick:
+                function () {
+                  m.route.set('/mainPage', null, null);
+                }, class: 'button2'
+              }, 'Book Flight')),
+              m('div', { id: 'banner' },
+                m('img[src="img/farmers-market.jpg"]')))
+        ]);
+      }
+    };
+
     var MainPage = {
       view: function () {
         return m('main', [
@@ -71,6 +101,8 @@
               m('p', { class: 'p-header' }, 'Expand your horizons!')),
             m('hr'),
             m('hr:after'),
+            m('div', { id: 'sidebar' },
+                m('img[src="img/wine-tour.jpg"]')),
             m('div', { id: 'content' },
               m('h2', 'Select Dates'),
               m('div', { id: 'pickerdiv' },
@@ -87,10 +119,7 @@
                 m('label', { id: 'to' }, ' Arrival: '),
                 m('input', { id: 'to' }, 'to'),
                 m('br')),
-              m('p', 'Name: ', edmonton.name),
-              m('p', 'Country: ', edmonton.country),
-              m('p', 'Location: ', edmonton.location),
-              m('p', 'Code: ', edmonton.code)),
+              m('br'),              
               m('h2', 'Number of Seats'),
               m('br'),
               m('h2', 'Luxury'),
@@ -98,9 +127,9 @@
               m('div', { id: 'searchdiv' },
               m('button', {onclick:
                 function () {
-                  m.route.set('/mainPage', null, null);
+                  m.route.set('/checkoutPage', null, null);
                 }, class: 'button2'
-              }, 'Search Flights!')))
+              }, 'Search Flights'))))
         ]);
       }
     };
@@ -149,6 +178,7 @@
     m.route(root, '/splash',
       {
         '/splash': Splash,
+        '/checkoutPage': CheckoutPage,
         '/mainPage': MainPage
       });
   </script>
