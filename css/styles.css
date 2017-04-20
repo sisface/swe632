@@ -15,29 +15,29 @@ header {
 }
  
 header-h1 {
-	font: 100 60px/1.5 Helvetica, Verdana, sans-serif;
+	font: xx-large Helvetica, Verdana, sans-serif;
 }
 
 h2 {
     color: black;
-  	font: Helvetica, Verdana, sans-serif;
+  	font: larger Helvetica, Verdana, sans-serif;
     background: lightgrey;
     width: 75%;
 }
 
 h3 {
     color: black;
-  	font: Helvetica, Verdana, sans-serif;
+  	font: xx-large Helvetica, Verdana, sans-serif;
 }
 
 p {
     color: black;
-	font: 100 20px/1.5 Helvetica, Verdana, sans-serif;
+	font: large Helvetica, Verdana, sans-serif;
 }
 
 .p-header {
     color: dimgrey;
-	font: 100 20px/1.5 Helvetica, Verdana, sans-serif;
+	font: large Helvetica, Verdana, sans-serif;
 }
 
 .p1 {
@@ -45,7 +45,7 @@ p {
     margin-right:auto;
     text-align: center;
     color: black;
-	font: 100 20px/1.5;
+	font: large;
 }
 
 /*horizontal lines*/
