@@ -16,6 +16,7 @@ header {
  
 header-h1 {
 	font: xx-large Helvetica, Verdana, sans-serif;
+    color:black;
 }
 
 h2 {
@@ -81,6 +82,7 @@ hr:after {
 #content {
     padding: 15px;
     background: white;
+    color: black;
 }
 
 #searchdiv {
@@ -127,6 +129,18 @@ hr:after {
     background-color:#fafafa;
     color:#207cca;
 }
+
+body {
+	font-family: sans-serif;
+	font-weight: normal;
+	margin: 10px;
+	color: #999;
+	background-color: black;
+}
+
+/* radio buttons */
+
+
 
 /*advertisements*/
 
