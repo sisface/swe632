@@ -66,7 +66,7 @@ hr:after {
     top: -0.7em; 
     font-size: 1.5em; 
     padding: 0 0.25em;
-    background: white; 
+    background: #ECF4FA; 
 }
 
 #container {
@@ -74,26 +74,25 @@ hr:after {
     height: 99%;
   	overflow: hidden;
   	margin: 50px auto;
-  	background: white;
+  	background: #ECF4FA;
 }
 
 /*content divs*/
 
 #content {
     padding: 15px;
-    background: white;
     color: black;
 }
 
 #searchdiv {
     width: 400px;
-    margin: 50px auto;
+    margin: auto;
     }
 
 #pickerdiv {
     width: 90%;
     margin: 40px auto;
-    margin-left: 40px;
+    margin-left: 10% auto;
     }
 
 /*search bar and buttons*/
@@ -153,16 +152,16 @@ body {
 }
 
 #sidebar2 {
-  float: right;
-  padding-top: 15px;
+  float: left;
+  padding-left: 15px;
   color: #eee;
   min-height: 650px;
   min-width: 400px;
 }
 
 #banner {
-  position: relative;
-  padding: 15px;
+  display: table;
+  margin: auto;
   color: #eee;
 }
 

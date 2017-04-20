@@ -75,13 +75,13 @@
               m('h3', 'Thank you for your purchase.'),
               m('br'),
               m('p', 'A confirmation notice has been sent to the email address you provided.'),
-              m('br')),              
+              m('br'),
               m('div', { id: 'searchdiv' },
-              m('button', {onclick:
-                function () {
-                  m.route.set('/mainPage', null, null);
-                }, class: 'button2'
-              }, 'Reserve Another Flight')))
+                m('button', {onclick:
+                  function () {
+                    m.route.set('/mainPage', null, null);
+                  }, class: 'button2'
+                }, 'Reserve Another Flight'))))
         ]);
       }
     };
