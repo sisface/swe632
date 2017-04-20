@@ -25,6 +25,11 @@ h2 {
     width: 75%;
 }
 
+h3 {
+    color: black;
+  	font: Helvetica, Verdana, sans-serif;
+}
+
 p {
     color: black;
 	font: 100 20px/1.5 Helvetica, Verdana, sans-serif;
