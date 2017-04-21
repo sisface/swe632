@@ -1,275 +1,295 @@
 <!DOCTYPE html>
 <html lang='en'>
 
-<head>
-  <meta charset='UTF-8' name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <title>
-    Macroexpand Travel: Buy Plane Tickets Online!
-  </title>
-  <script src='https://unpkg.com/mithril/mithril.js'></script>
-  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    var handle = $( "#custom-handle" );
-    $( "#slider" ).slider({
-      create: function() {
-        handle.text( $( this ).slider( "value" ) );
-      },
-      slide: function( event, ui ) {
-        handle.text( ui.value );
-      }
-    });
-  } );
-  </script>  
-</head>
-<body>
-  <script>
-    var root = document.body;
+  <head>
+    <meta charset='UTF-8' name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>
+      Macroexpand Travel: Buy Plane Tickets Online!
+    </title>
+    <script src='https://unpkg.com/mithril/mithril.js'></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+     $( function() {
+       var handle = $( "#custom-handle" );
+       $( "#slider" ).slider({
+         create: function() {
+           handle.text( $( this ).slider( "value" ) );
+         },
+         slide: function( event, ui ) {
+           handle.text( ui.value );
+         }
+       });
+     } );
+    </script>
+  </head>
+  <body>
+    <script>
+     var root = document.body;
 
-    // TODO: Replace this test query.  The MongoID won't match on your system.
-    var edmonton = {};
-    function getEdmonton() {
-      m.request({
-        method: 'GET',
-        url: 'http://localhost:8080/api/airport/' + '58fa2278bcb58088908bd2b0',
-        withCredentials: true
-      }).then(function (result) {
-        edmonton = result;
-      });
-    }
-    getEdmonton();
+     // TODO: Replace this test query.  The MongoID won't match on your system.
+     var edmonton = {};
+     function getEdmonton() {
+       m.request({
+         method: 'GET',
+         url: 'http://localhost:8080/api/airport/' + '58fa2278bcb58088908bd2b0',
+         withCredentials: true
+       }).then(function (result) {
+         edmonton = result;
+       });
+     }
+     getEdmonton();
 
-    var SwapSeatsPage = {
-      view: function () {
-        return m('main', [
-          m('div', { id: 'container' },         
-            m('header', { class: 'header' },
-              m('ul', { class:'sidenav' },
-                m('li', 'Home'),
-                m('li', 'Search Flights'),
-                m('li', 'Swap Seats')),   
-              m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
-              m('p', { class: 'p-header' }, 'Expand your horizons!')),
-            m('hr'),
-            m('hr:after'),                 
-            m('div', { id: 'content' }, 
-              m('h1', 'Seat Swapping Program'),
-            m('div', { id: 'sidebar3' },
-              m('img[src="img/united.jpg"]')),              
-              m('div', { id: 'promodiv' },
-                m('p', 'Macroexpand Travel has partnered with United Airlines to offer a unique seat swapping service. Volunteer your seat to earn credits towards cool swag, airline miles, and more (OR ELSE). Not happy with your seat? Not a problem. Swap your spot with other passengers for a small fee. Some restrictions apply.*'),
-                m('br'),
-                m('p', {class:'p3'}, 'United Airlines: "Come for the seating, stay for the beating!"')),
-              m('h2', 'Available Seats'),
-              m('div', { id: 'pickerdiv' },
-                m('p', 'Enter your flight code to search for available swaps on your flight.'),
-                m('br'),              
-                m('label', "Flight Code: "),
-                m('input[type=text]', {
-                })),
-              m('br'),
-                m('p', 'Name: '),
-                m('p', 'Seat No.: ')),
-            m('div', { id: 'searchdiv' },
-              m('button', {
-                onclick: function () {
-                          m.route.set('/confirmationPage', null, null);
-                        }, 
-                class: 'button2'
-              }, 'Swap Seats'),          
-              m('br'),                
-              m('p4', '*All program volunteers are subject to frequent, violent beatings should they fail to comply with United Policies. Macroexpand Travel assumes no liability for bodily harm incurred by using this service, up to and including death.'),  
-              m('br')))
-        ]);
-      }
-    };    
+     var SwapSeatsPage = {
+       view: function () {
+         return m('main', [
+           m('div', { id: 'container' },
+             m('header', { class: 'header' },
+               m('ul', { class:'sidenav' },
+                 m('li', m("a[href='/']", {config: m.route}, "Home")),
+                 m('li', m("a[href='/#!/mainPage']", {config: m.route}, "Search Flights")),
+                 m('li', m("a[href='/#!/swapSeatsPage']", {config: m.route}, "Swap Seats"))),
+               m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
+               m('p', { class: 'p-header' }, 'Expand your horizons!'),
+               m('br'),
+               m('br')),
+             m('hr'),
+             m('hr:after'),
+             m('div', { id: 'content' },
+               m('h1', 'Seat Swapping Program'),
+               m('div', { id: 'promodiv' },
+                 m('p', 'Macroexpand Travel has partnered with United Airlines to offer a unique seat swapping service. Volunteer your seat to earn credits towards cool swag, airline miles, and more (OR ELSE). Not happy with your seat? Not a problem. Swap your spot with other passengers for a small fee. Some restrictions apply.*'),
+                 m('br'),
+                 m('p', {class:'p3'}, 'United Airlines: "Come for the seating, stay for the beating!"')),
+               m('h4', 'Available Seats'),
+               m('div', { id: 'pickerdiv' },
+                 m('p', 'Enter your flight code to search for available swaps on your flight.'),
+                 m('br'),
+                 m('label', "Flight Code: "),
+                 m('input[type=text]', {
+                 })),
+               m('br'),
+               m('p', 'Name: '),
+               m('p', 'Seat No.: ')),
+             m('div', { id: 'searchdiv' },
+               m('button', {
+                 onclick: function () {
+                   m.route.set('/confirmationPage', null, null);
+                 },
+                 class: 'button2'
+               }, 'Swap Seats')),
+               m('br'),
+               m('p4', '*All program volunteers are subject to frequent, violent beatings should they fail to comply with United Policies. Macroexpand Travel assumes no liability for bodily harm incurred by using this service, up to and including death.'),
+               m('br'))
+         ]);
+       }
+     };
 
-    var ConfirmationPage = {
-      view: function () {
-        return m('main', [
-          m('div', { id: 'container' },
-            m('header', { class: 'header' },
-              m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
-              m('p', { class: 'p-header' }, 'Expand your horizons!')),
-            m('hr'),
-            m('hr:after'),
-            m('div', { id: 'sidebar2' },
-              m('img[src="img/yoga-retreat.jpg"]')),
-            m('div', { id: 'content' },
-              m('h3', 'Thank you for your purchase.'),
-              m('br'),
-              m('p', 'A confirmation notice has been sent to the email address you provided.'),
-              m('br'),
-              m('div', { id: 'searchdiv' },
-                m('button', {
-                  onclick: function () {
-                            m.route.set('/mainPage', null, null);
-                          }, 
-                  class: 'button2'
-                }, 'Reserve Another Flight'))))
-        ]);
-      }
-    };
+     var ConfirmationPage = {
+       view: function () {
+         return m('main', [
+           m('div', { id: 'container' },
+             m('header', { class: 'header' },
+               m('ul', { class:'sidenav' },
+                 m('li', m("a[href='/']", {config: m.route}, "Home")),
+                 m('li', m("a[href='/#!/mainPage']", {config: m.route}, "Search Flights")),
+                 m('li', m("a[href='/#!/swapSeatsPage']", {config: m.route}, "Swap Seats"))),
+               m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
+               m('p', { class: 'p-header' }, 'Expand your horizons!'),
+               m('br'),
+               m('br')),
+             m('hr'),
+             m('hr:after'),
+             m('div', { id: 'sidebar2' },
+               m('img[src="img/yoga-retreat.jpg"]')),
+             m('div', { id: 'content' },
+               m('h3', 'Thank you for your purchase.'),
+               m('br'),
+               m('p', 'A confirmation notice has been sent to the email address you provided.'),
+               m('br'),
+               m('div', { id: 'searchdiv' },
+                 m('button', {
+                   onclick: function () {
+                     m.route.set('/mainPage', null, null);
+                   },
+                   class: 'button2'
+                 }, 'Reserve Another Flight'))))
+         ]);
+       }
+     };
 
-    var CheckoutPage = {
-      view: function () {
-        return m('main', [
-          m('div', { id: 'container' },
-            m('header', { class: 'header' },
-              m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
-              m('p', { class: 'p-header' }, 'Expand your horizons!')),
-            m('hr'),
-            m('hr:after'),
-            m('div', { id: 'content' },
-              m('h2', 'Available Flights'),
-              m('div', { id: 'pickerdiv' },
-                m('p', 'Name: ', ""), // TODO: Put value here.
-                m('p', 'Country: ', ""), // TODO: Put value here.
-                m('p', 'Location: ', ""), // TODO: Put value here.
-                m('p', 'Code: ', "")), // TODO: Put value here.
-              m('h2', 'Enter Customer Information'),
-              m('div', { id: 'pickerdiv' },
-                m('label', "Coupon Code: "),
-                m('input[type=text]', {
-                })),
-              m('br')
-              ),
-            m('div', { id: 'searchdiv' },
-              m('button', {
-                onclick: function () {
-                          m.route.set('/confirmationPage', null, null);
-                        }, 
-                class: 'button2'
-              }, 'Book Flight')),
-            m('div', { id: 'banner' },
-              m('img[src="img/farmers-market.jpg"]'))
-              )
-        ]);
-      }
-    };
+     var CheckoutPage = {
+       view: function () {
+         return m('main', [
+           m('div', { id: 'container' },
+             m('header', { class: 'header' },
+               m('ul', { class:'sidenav' },
+                 m('li', m("a[href='/']", {config: m.route}, "Home")),
+                 m('li', m("a[href='/#!/mainPage']", {config: m.route}, "Search Flights")),
+                 m('li', m("a[href='/#!/swapSeatsPage']", {config: m.route}, "Swap Seats"))),
+               m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
+               m('p', { class: 'p-header' }, 'Expand your horizons!'),
+               m('br'),
+               m('br')),
+             m('hr'),
+             m('hr:after'),
+             m('div', { id: 'content' },
+               m('h2', 'Available Flights'),
+               m('div', { id: 'pickerdiv' },
+                 m('p', 'Name: ', ""), // TODO: Put value here.
+                 m('p', 'Country: ', ""), // TODO: Put value here.
+                 m('p', 'Location: ', ""), // TODO: Put value here.
+                 m('p', 'Code: ', "")), // TODO: Put value here.
+               m('h2', 'Enter Customer Information'),
+               m('div', { id: 'pickerdiv' },
+                 m('label', "Coupon Code: "),
+                 m('input[type=text]', {
+                 })),
+               m('br')
+             ),
+             m('div', { id: 'searchdiv' },
+               m('button', {
+                 onclick: function () {
+                   m.route.set('/confirmationPage', null, null);
+                 },
+                 class: 'button2'
+               }, 'Book Flight')),
+             m('div', { id: 'banner' },
+               m('img[src="img/farmers-market.jpg"]'))
+           )
+         ]);
+       }
+     };
 
-    var MainPage = {
-      view: function () {
-        return m('main', [
-          m('div', { id: 'container' },
-            m('header', { class: 'header' },
-              m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
-              m('p', { class: 'p-header' }, 'Expand your horizons!')),
-            m('hr'),
-            m('hr:after'),
-            m('div', { id: 'sidebar' },
-              m('img[src="img/wine-tour.jpg"]')),
-            m('div', { id: 'content' },
-              m('h2', 'Select Dates'),
-              m('div', { id: 'pickerdiv' },
-                m('label', { id: 'from' }, 'Depart: '),
-                m('input', { id: 'from' }, 'from'),
-                m('br'),
-                m('br'),
-                m('label', { id: 'to' }, 'Arrive: '),
-                m('input', { id: 'to' }, 'to'),
-                m('br')),
-              m('h2', 'Select Airports'),
-              m('br'),
-              m('div', { id: 'pickerdiv' },
-                m('label', { id: 'from' }, 'Depart: '),
-                m('input', { id: 'from' }, 'from'),
-                m('br'),
-                m('br'),
-                m('label', { id: 'to' }, 'Arrive: '),
-                m('input', { id: 'to' }, 'to'),
-                m('br')),
-              m('br'),
-              m('h2', 'Accomodations'),
-              m('div', { id: 'pickerdiv' },
-                m('label',
-                  m('p', 'First Class'),
-                  m('input[type=radio][name=radio][value=First Class][class=option-input radio]'),
-                  m('br'), 
-                  m('br'), 
-                  m('p', 'Business Class'),
-                  m('input[type=radio][name=radio][value=Business Class][class=option-input radio]'),
-                  m('br'), 
-                  m('br'), 
-                  m('p', 'Economy'),                  
-                  m('input[type=radio][name=radio][value=Economy][class=option-input radio]')),
-                m('br'), 
-                m('br'),  
-                m('br'),                                               
-                m('label', "Number of Seats "),
-                m('br'),
-                m('br'),                
-                m('div', { id: 'slider' },
-                  m('div', { id: 'custom-handle', class: 'ui-slider-handle' })))),
-              m('div', { id: 'searchdiv' },
-                m('button', {
-                  onclick: function () {
-                             m.route.set('/checkoutPage', null, null);
-                          },
-                  class: 'button2'
-                }, 'Search Flights')))
-        ]);
-      }
-    };
+     var MainPage = {
+       view: function () {
+         return m('main', [
+           m('div', { id: 'container' },
+             m('header', { class: 'header' },
+               m('ul', { class:'sidenav' },
+                 m('li', m("a[href='/']", {config: m.route}, "Home")),
+                 m('li', m("a[href='/#!/mainPage']", {config: m.route}, "Search Flights")),
+                 m('li', m("a[href='/#!/swapSeatsPage']", {config: m.route}, "Swap Seats"))),
+               m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
+               m('p', { class: 'p-header' }, 'Expand your horizons!'),
+               m('br'),
+               m('br')),
+             m('hr'),
+             m('hr:after'),
+             m('div', { id: 'sidebar' },
+               m('img[src="img/wine-tour.jpg"]')),
+             m('div', { id: 'content' },
+               m('h2', 'Select Dates'),
+               m('div', { id: 'pickerdiv' },
+                 m('label', { id: 'from' }, 'Depart: '),
+                 m('input', { id: 'from' }, 'from'),
+                 m('br'),
+                 m('br'),
+                 m('label', { id: 'to' }, 'Arrive: '),
+                 m('input', { id: 'to' }, 'to'),
+                 m('br')),
+               m('h2', 'Select Airports'),
+               m('br'),
+               m('div', { id: 'pickerdiv' },
+                 m('label', { id: 'from' }, 'Depart: '),
+                 m('input', { id: 'from' }, 'from'),
+                 m('br'),
+                 m('br'),
+                 m('label', { id: 'to' }, 'Arrive: '),
+                 m('input', { id: 'to' }, 'to'),
+                 m('br')),
+               m('br'),
+               m('h2', 'Accomodations'),
+               m('div', { id: 'pickerdiv' },
+                 m('label',
+                   m('p', 'First Class'),
+                   m('input[type=radio][name=radio][value=First Class][class=option-input radio]'),
+                   m('br'),
+                   m('br'),
+                   m('p', 'Business Class'),
+                   m('input[type=radio][name=radio][value=Business Class][class=option-input radio]'),
+                   m('br'),
+                   m('br'),
+                   m('p', 'Economy'),
+                   m('input[type=radio][name=radio][value=Economy][class=option-input radio]')),
+                 m('br'),
+                 m('br'),
+                 m('br'),
+                 m('label', "Number of Seats "),
+                 m('br'),
+                 m('br'),
+                 m('div', { id: 'slider' },
+                   m('div', { id: 'custom-handle', class: 'ui-slider-handle' })))),
+             m('div', { id: 'searchdiv' },
+               m('button', {
+                 onclick: function () {
+                   m.route.set('/checkoutPage', null, null);
+                 },
+                 class: 'button2'
+               }, 'Search Flights')))
+         ]);
+       }
+     };
 
-    var Splash = {
-      view: function () {
-        return ('main', [
-          m('div', { id: 'container' },
-            m('header', { class: 'header' },
-              m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
-              m('p', { class: 'p-header' }, 'Expand your horizons!')),
-            m('hr'),
-            m('hr:after'),
-            m('p', { class: 'p1' }, 'Discount online flight reservation booking, ticket purchases, and seat swapping. Choose flights from hundreds of participating airlines from across the globe.'),
-            m('br'),
-            m('p', { class: 'p2' }, 'Not happy with your assigned seat? No problem! Swap your seat with other interested passengers on your flight using our unique flight credit system.'),
-            m('div', { id: 'linkdiv' },
-              m("a[href='/#!/swapSeatsPage']", {config: m.route}, 'Click here to learn more!')),
-            m('br'),
-            m('div', { class: 'photobanner' },
-              m('img[src="img/image-a.JPG"]', { class: 'banner-img' }),
-              m('img[src="img/image-b.JPG"]'),
-              m('img[src="img/image-c.JPG"]'),
-              m('img[src="img/image-d.JPG"]'),
-              m('img[src="img/image-e.JPG"]'),
-              m('img[src="img/image-f.JPG"]'),
-              m('img[src="img/image-g.JPG"]'),
-              m('img[src="img/image-h.JPG"]'),
-              m('img[src="img/image-i.JPG"]'),
-              m('img[src="img/image-j.JPG"]'),
-              m('img[src="img/image-a.JPG"]'),
-              m('img[src="img/image-b.JPG"]'),
-              m('img[src="img/image-c.JPG"]'),
-              m('img[src="img/image-d.JPG"]'),
-              m('img[src="img/image-e.JPG"]'),
-              m('img[src="img/image-f.JPG"]'),
-              m('img[src="img/image-g.JPG"]'),
-              m('img[src="img/image-h.JPG"]')),
-            m('div', { id: 'searchdiv' },
-              m('input', { class: 'search' }, 'input[type=text]'),
-              m('button', {
-                onclick: function () {
-                          m.route.set('/mainPage', null, null);
-                        }, 
-                class: 'button'
-              }, 'Search Flights!'))),
-        ]);
-      }
-    };
+     var Splash = {
+       view: function () {
+         return ('main', [
+           m('div', { id: 'container' },
+             m('header', { class: 'header' },
+               m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
+               m('p', { class: 'p-header' }, 'Expand your horizons!'),
+             m('br'),
+             m('br')),
+             m('hr'),
+             m('hr:after'),
+             m('p', { class: 'p1' }, 'Discount online flight reservation booking, ticket purchases, and seat swapping. Choose flights from hundreds of participating airlines from across the globe.'),
+             m('br'),
+             m('p', { class: 'p2' }, 'Not happy with your assigned seat? No problem! Swap your seat with other interested passengers on your flight using our unique flight credit system.'),
+             m('div', { id: 'linkdiv' },
+               m("a[href='/#!/swapSeatsPage']", {config: m.route}, 'Click here to learn more!')),
+             m('br'),
+             m('div', { class: 'photobanner' },
+               m('img[src="img/image-a.JPG"]', { class: 'banner-img' }),
+               m('img[src="img/image-b.JPG"]'),
+               m('img[src="img/image-c.JPG"]'),
+               m('img[src="img/image-d.JPG"]'),
+               m('img[src="img/image-e.JPG"]'),
+               m('img[src="img/image-f.JPG"]'),
+               m('img[src="img/image-g.JPG"]'),
+               m('img[src="img/image-h.JPG"]'),
+               m('img[src="img/image-i.JPG"]'),
+               m('img[src="img/image-j.JPG"]'),
+               m('img[src="img/image-a.JPG"]'),
+               m('img[src="img/image-b.JPG"]'),
+               m('img[src="img/image-c.JPG"]'),
+               m('img[src="img/image-d.JPG"]'),
+               m('img[src="img/image-e.JPG"]'),
+               m('img[src="img/image-f.JPG"]'),
+               m('img[src="img/image-g.JPG"]'),
+               m('img[src="img/image-h.JPG"]')),
+             m('div', { id: 'searchdiv' },
+               m('input', { class: 'search' }, 'input[type=text]'),
+               m('button', {
+                 onclick: function () {
+                   m.route.set('/mainPage', null, null);
+                 },
+                 class: 'button'
+               }, 'Search Flights!'))),
+         ]);
+       }
+     };
 
-    m.route(root, '/splash',
-      {
-        '/splash': Splash,
-        '/mainPage': MainPage,
-        '/checkoutPage': CheckoutPage,
-        '/confirmationPage': ConfirmationPage,
-        '/swapSeatsPage': SwapSeatsPage
-      });
-  </script>
-</body>
+     m.route(root, '/splash',
+             {
+               '/splash': Splash,
+               '/mainPage': MainPage,
+               '/checkoutPage': CheckoutPage,
+               '/confirmationPage': ConfirmationPage,
+               '/swapSeatsPage': SwapSeatsPage
+             });
+    </script>
+  </body>
 
 </html>
