@@ -82,11 +82,20 @@ p {
     font: xx-small Helvetica, Verdana, sans-serif;
 }
 
+.p5 {
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+    color: black;
+    font: medium Helvetica, Verdana, sans-serif;
+    font-style: italic;
+}
+
 label {
     font: large Helvetica, Verdana, sans-serif;
 }
 
-/*horizontal lines*/
+/* horizontal lines */
 
 hr {
     padding: 0;
@@ -114,7 +123,7 @@ hr:after {
     background: #ECF4FA;
 }
 
-/*content divs*/
+/* content divs */
 
 #content {
     padding: 15px;
@@ -122,7 +131,12 @@ hr:after {
 }
 
 #searchdiv {
-    width: 400px;
+    display: table;
+    margin: auto;
+}
+
+#searchdiv2 {
+    width: 40%;
     margin: auto;
 }
 
@@ -145,7 +159,7 @@ hr:after {
     line-height: auto;
 }
 
-/*nav bar*/
+/* nav bar */
 
 ul.sidenav {
     list-style-type: none;
@@ -204,7 +218,7 @@ div.content {
     }
 }
 
-/*search bar and buttons*/
+/* search bar and buttons */
 
 .search {
     padding:8px 20px;
@@ -238,7 +252,23 @@ div.content {
     color:#207cca;
 }
 
-/*radio buttons*/
+/* text input */
+
+input[type=TEXT] {
+    width:225px;
+    height:26px;
+}
+
+#text1 {
+    border: 2px solid rgb(173, 204, 204);
+    height: 31px;
+    width: 223px;
+    box-shadow: 0px 0px 27px rgb(204, 204, 204) inset;
+    transition:500ms all ease;
+    padding:3px 3px 3px 3px;
+}
+
+/* radio buttons */
 
 @keyframes click-wave {
     0% {
@@ -335,7 +365,7 @@ div.content {
     margin-top: 25px;
 }
 
-/*advertisements*/
+/* advertisements */
 
 #sidebar {
     float: right;
@@ -390,7 +420,7 @@ div.content {
     }
 }
 
-/*photobanner*/
+/* photobanner */
 
 .banner-img {
     margin-left: auto;
@@ -428,7 +458,7 @@ div.content {
     box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 }
 
-/*keyframe animations*/
+/* keyframe animations */
 .banner-img {
     width: 350px;
     height: 233px;

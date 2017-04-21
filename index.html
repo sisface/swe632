@@ -60,7 +60,7 @@
              m('div', { id: 'content' },
                m('h1', 'Seat Swapping Program'),
                m('div', { id: 'promodiv' },
-                 m('p', 'Macroexpand Travel has partnered with United Airlines to offer a unique seat swapping service. Volunteer your seat to earn credits towards cool swag, airline miles, and more (OR ELSE). Not happy with your seat? Not a problem. Swap your spot with other passengers for a small fee. Some restrictions apply.*'),
+                 m('p', 'Macroexpand Travel has partnered with United Airlines to offer a unique seat swapping service. Volunteer your seat to earn credits towards cool swag, airline miles, and more (OR ELSE). Not happy with your seat? Not a problem. Swap your spot with other United passengers on the same flight for a small fee. Some restrictions apply.*'),
                  m('br'),
                  m('p', {class:'p3'}, 'United Airlines: "Come for the seating, stay for the beating!"')),
                m('h4', 'Available Seats'),
@@ -68,8 +68,7 @@
                  m('p', 'Enter your flight code to search for available swaps on your flight.'),
                  m('br'),
                  m('label', "Flight Code: "),
-                 m('input[type=text]', {
-                 })),
+                 m('input[type=text]', {id: 'text1' })),
                m('br'),
                m('p', 'Name: '),
                m('p', 'Seat No.: ')),
@@ -109,7 +108,7 @@
                m('br'),
                m('p', 'A confirmation notice has been sent to the email address you provided.'),
                m('br'),
-               m('div', { id: 'searchdiv' },
+               m('div', { id: 'searchdiv2' },
                  m('button', {
                    onclick: function () {
                      m.route.set('/mainPage', null, null);
@@ -136,17 +135,16 @@
              m('hr'),
              m('hr:after'),
              m('div', { id: 'content' },
-               m('h2', 'Available Flights'),
+               m('h4', 'Available Flights'),
                m('div', { id: 'pickerdiv' },
                  m('p', 'Name: ', ""), // TODO: Put value here.
                  m('p', 'Country: ', ""), // TODO: Put value here.
                  m('p', 'Location: ', ""), // TODO: Put value here.
                  m('p', 'Code: ', "")), // TODO: Put value here.
-               m('h2', 'Enter Customer Information'),
+               m('h4', 'Enter Customer Information'),
                m('div', { id: 'pickerdiv' },
                  m('label', "Coupon Code: "),
-                 m('input[type=text]', {
-                 })),
+                 m('input[type=text]', {id: 'text1' })),
                m('br')
              ),
              m('div', { id: 'searchdiv' },
@@ -246,10 +244,6 @@
              m('hr:after'),
              m('p', { class: 'p1' }, 'Discount online flight reservation booking, ticket purchases, and seat swapping. Choose flights from hundreds of participating airlines from across the globe.'),
              m('br'),
-             m('p', { class: 'p2' }, 'Not happy with your assigned seat? No problem! Swap your seat with other interested passengers on your flight using our unique flight credit system.'),
-             m('div', { id: 'linkdiv' },
-               m("a[href='/#!/swapSeatsPage']", {config: m.route}, 'Click here to learn more!')),
-             m('br'),
              m('div', { class: 'photobanner' },
                m('img[src="img/image-a.JPG"]', { class: 'banner-img' }),
                m('img[src="img/image-b.JPG"]'),
@@ -269,6 +263,7 @@
                m('img[src="img/image-f.JPG"]'),
                m('img[src="img/image-g.JPG"]'),
                m('img[src="img/image-h.JPG"]')),
+             m('br'),
              m('div', { id: 'searchdiv' },
                m('input', { class: 'search' }, 'input[type=text]'),
                m('button', {
@@ -276,7 +271,11 @@
                    m.route.set('/mainPage', null, null);
                  },
                  class: 'button'
-               }, 'Search Flights!'))),
+               }, 'Search Flights!')),
+             m('p', { class: 'p5' }, 'Not happy with your assigned seat? No problem! Swap your seat with other interested passengers on your flight using our unique flight credit system.'),             
+             m('div', { id: 'linkdiv' },
+               m("a[href='/#!/swapSeatsPage']", {config: m.route}, 'Click here to learn more!')),
+               m('br')),
          ]);
        }
      };
