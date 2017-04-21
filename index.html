@@ -45,12 +45,12 @@
     var SwapSeatsPage = {
       view: function () {
         return m('main', [
-          m('div', { id: 'container' },
-           m('ul', { class:'sidenav' },
-              m('li', 'Home'),
-              m('li', 'Search Flights'),
-              m('li', 'Swap Seats')),            
+          m('div', { id: 'container' },         
             m('header', { class: 'header' },
+              m('ul', { class:'sidenav' },
+                m('li', 'Home'),
+                m('li', 'Search Flights'),
+                m('li', 'Swap Seats')),   
               m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
               m('p', { class: 'p-header' }, 'Expand your horizons!')),
             m('hr'),
@@ -126,16 +126,17 @@
             m('div', { id: 'content' },
               m('h2', 'Available Flights'),
               m('div', { id: 'pickerdiv' },
-                m('p', 'Name: ', edmonton.name),
-                m('p', 'Country: ', edmonton.country),
-                m('p', 'Location: ', edmonton.location),
-                m('p', 'Code: ', edmonton.code)),
+                m('p', 'Name: ', ""), // TODO: Put value here.
+                m('p', 'Country: ', ""), // TODO: Put value here.
+                m('p', 'Location: ', ""), // TODO: Put value here.
+                m('p', 'Code: ', "")), // TODO: Put value here.
               m('h2', 'Enter Customer Information'),
               m('div', { id: 'pickerdiv' },
                 m('label', "Coupon Code: "),
                 m('input[type=text]', {
                 })),
-              m('br')),
+              m('br')
+              ),
             m('div', { id: 'searchdiv' },
               m('button', {
                 onclick: function () {
@@ -144,7 +145,8 @@
                 class: 'button2'
               }, 'Book Flight')),
             m('div', { id: 'banner' },
-              m('img[src="img/farmers-market.jpg"]')))
+              m('img[src="img/farmers-market.jpg"]'))
+              )
         ]);
       }
     };
@@ -226,12 +228,7 @@
             m('br'),
             m('p', { class: 'p2' }, 'Not happy with your assigned seat? No problem! Swap your seat with other interested passengers on your flight using our unique flight credit system.'),
             m('div', { id: 'linkdiv' },
-              m('a', {
-                  onclick: function () {
-                             m.route.set('/swapSeatsPage', null, null);
-                          },
-                  class: 'a'
-                }, 'Click here to learn more!')),
+              m("a[href='/#!/swapSeatsPage']", {config: m.route}, 'Click here to learn more!')),
             m('br'),
             m('div', { class: 'photobanner' },
               m('img[src="img/image-a.JPG"]', { class: 'banner-img' }),

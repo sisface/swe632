@@ -1,4 +1,4 @@
-/*general styles*/
+/* general styles */
 
 * {
     margin: 0; padding: 0;
@@ -187,7 +187,7 @@ hr:after {
     opacity: 0.35;
     position: relative;
   }
-  
+
   100% {
     height: 200px;
     width: 200px;
@@ -273,8 +273,7 @@ hr:after {
 #slider {
    width: 25%;
    margin-top: 25px;
-}  
-
+}
 
 /*advertisements*/
 
