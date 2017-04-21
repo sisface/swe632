@@ -24,6 +24,7 @@ SETUP
 TO RUN
 - Run: `mongod`.
 - Run: `node server.js`.
+- Type `localhost:8080` into browser address bar.
 
 MONGODB COMMANDS
 - Start the Mongo shell: `mongo`.
