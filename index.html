@@ -5,7 +5,6 @@
   <meta charset='UTF-8' />
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
   <title>
     Macroexpand Travel: Buy Plane Tickets Online!
   </title>
@@ -180,30 +179,32 @@
               m('br'),
               m('h2', 'Accomodations'),
               m('div', { id: 'pickerdiv' },
+                m('label',
+                  m('p', 'First Class'),
+                  m('input[type=radio][name=radio][value=First Class][class=option-input radio]'),
+                  m('br'), 
+                  m('br'), 
+                  m('p', 'Business Class'),
+                  m('input[type=radio][name=radio][value=Business Class][class=option-input radio]'),
+                  m('br'), 
+                  m('br'), 
+                  m('p', 'Economy'),                  
+                  m('input[type=radio][name=radio][value=Economy][class=option-input radio]')),
+                m('br'), 
+                m('br'),  
+                m('br'),                                               
                 m('label', "Number of Seats "),
                 m('br'),
                 m('br'),                
-                m('div', { id: 'slider'},
-                  m('div', { id: 'custom-handle' }, {class: 'ui-slider-handle' })),
-                m('br')),
-              m('h2', 'Luxury'),
-              m('div', { id: 'pickerdiv' },
-                m('label', "First Class "),
-                m('input[type=radio]', { id: 'lux' }),
-                m('br'),
-                m('label', "Business Class "),
-                m('input[type=radio]', { id: 'lux' }),
-                m('br'),
-                m('label', "Economy "),
-                m('input[type=radio]', { id: 'lux' }),
-                m('br')),
+                m('div', { id: 'slider' },
+                  m('div', { id: 'custom-handle', class: 'ui-slider-handle' })))),
               m('div', { id: 'searchdiv' },
                 m('button', {
                   onclick: function () {
                              m.route.set('/checkoutPage', null, null);
                           },
                   class: 'button2'
-                }, 'Search Flights'))))
+                }, 'Search Flights')))
         ]);
       }
     };
