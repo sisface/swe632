@@ -8,6 +8,12 @@ body {
 	background: black;
 }
 
+a {
+    color: blue;
+    text-decoration: underline;
+	font: large Helvetica, Verdana, sans-serif;
+}
+
 header {
 	width: 50%;
 	margin: 40px auto;
@@ -47,6 +53,28 @@ p {
     text-align: center;
     color: black;
 	font: large;
+}
+
+.p2 {
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+    color: black;
+	font: smaller;
+}
+
+.p3 {
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+    color: darkred;
+	font: large;
+    font-style: italic; 
+}
+
+.p4 {
+    color: grey;
+	font: xx-small;
 }
 
 /*horizontal lines*/
@@ -93,8 +121,28 @@ hr:after {
     width: 90%;
     margin: 40px auto;
     margin-left: 10% auto;
-
     }
+
+#promodiv {
+    width: 99%;
+    margin: 40px auto;
+    text-align: left;
+    }
+
+#linkdiv {
+    width: 99%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: auto;
+    }   
+
+#disclaimerdiv {
+    width: 99%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: auto;
+    margin: 5%;
+    }       
 
 /*search bar and buttons*/
 
@@ -160,6 +208,15 @@ body {
   min-width: 400px;
 }
 
+#sidebar3 {
+  float: right;
+  padding-top: 40px;
+  padding-left: 15px;
+  color: #eee;
+  min-height: 650px;
+  min-width: 400px;
+}
+
 #banner {
   display: table;
   margin: auto;
@@ -174,6 +231,10 @@ body {
 #sidebar2 {
   display: none;
   }
+
+#sidebar3 {
+  display: none;
+  }  
 
 #banner {
   display: none;

@@ -62,6 +62,46 @@
     }
     getEdmonton();
 
+    var SwapSeatsPage = {
+      view: function () {
+        return m('main', [
+          m('div', { id: 'container' },
+            m('header', { class: 'header' },
+              m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
+              m('p', { class: 'p-header' }, 'Expand your horizons!')),
+            m('hr'),
+            m('hr:after'),
+            m('div', { id: 'content' },
+              m('h1', 'Seat Swapping Program'),
+            m('div', { id: 'sidebar3' },
+              m('img[src="img/united.jpg"]')),              
+              m('div', { id: 'promodiv' },
+                m('p', 'Macroexpand Travel has partnered with United Airlines to offer a unique seat swapping service. Volunteer your seat to earn credits towards cool swag, airline miles, and more (OR ELSE). Not happy with your seat? Not a problem. Swap your spot with other passengers for a small fee. Some restrictions apply.*'),
+                m('br'),
+                m('p', {class:'p3'}, 'United Airlines: "Come for the seating, stay for the beating!"')),
+              m('h2', 'Available Seats'),
+              m('div', { id: 'pickerdiv' },
+                m('p', 'Enter your flight code to search for available swaps on your flight.'),
+                m('br'),              
+                m('label', "Flight Code: "),
+                m('input[type=text]', {
+                })),
+              m('br')),
+            m('div', { id: 'searchdiv' },
+              m('button', {
+                onclick: function () {
+                          m.route.set('/confirmationPage', null, null);
+                        }, 
+                class: 'button2'
+              }, 'Swap Seats')),
+            m('div', { id: 'disclaimerdiv' },              
+              m('br'),                
+              m('p4', '*All program volunteers are subject to frequent, violent beatings should they fail to comply with United Policies. Macroexpand Travel assumes no liability for bodily harm incurred by using this service, up to and including death.'),  
+              m('br')))
+        ]);
+      }
+    };    
+
     var ConfirmationPage = {
       view: function () {
         return m('main', [
@@ -192,7 +232,16 @@
               m('p', { class: 'p-header' }, 'Expand your horizons!')),
             m('hr'),
             m('hr:after'),
-            m('p', { class: 'p1' }, 'Discount online flight reservation booking and ticket purchases. Choose from hundreds of participating airlines from across the globe!'),
+            m('p', { class: 'p1' }, 'Discount online flight reservation booking, ticket purchases, and seat swapping. Choose flights from hundreds of participating airlines from across the globe.'),
+            m('br'),
+            m('p', { class: 'p2' }, 'Not happy with your assigned seat? No problem! Swap your seat with other interested passengers on your flight using our unique flight credit system.'),
+            m('div', { id: 'linkdiv' },
+              m('a', {
+                  onclick: function () {
+                             m.route.set('/swapSeatsPage', null, null);
+                          },
+                  class: 'a'
+                }, 'Click here to learn more!')),
             m('br'),
             m('div', { class: 'photobanner' },
               m('img[src="img/image-a.JPG"]', { class: 'banner-img' }),
@@ -230,7 +279,8 @@
         '/splash': Splash,
         '/mainPage': MainPage,
         '/checkoutPage': CheckoutPage,
-        '/confirmationPage': ConfirmationPage
+        '/confirmationPage': ConfirmationPage,
+        '/swapSeatsPage': SwapSeatsPage
       });
   </script>
 </body>
