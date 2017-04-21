@@ -4,48 +4,30 @@
 <head>
   <meta charset='UTF-8' />
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
   <title>
     Macroexpand Travel: Buy Plane Tickets Online!
   </title>
   <script src='https://unpkg.com/mithril/mithril.js'></script>
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var handle = $( "#custom-handle" );
+    $( "#slider" ).slider({
+      create: function() {
+        handle.text( $( this ).slider( "value" ) );
+      },
+      slide: function( event, ui ) {
+        handle.text( ui.value );
+      }
+    });
+  } );
+  </script>  
 </head>
 
 <body>
-  <script>
-    $(function () {
-      var dateFormat = "mm/dd/yy",
-        from = $("#from")
-          .datepicker({
-            defaultDate: "+1w",
-            changeMonth: true,
-            numberOfMonths: 3
-          })
-          .on("change", function () {
-            to.datepicker("option", "minDate", getDate(this));
-          }),
-        to = $("#to").datepicker({
-          defaultDate: "+1w",
-          changeMonth: true,
-          numberOfMonths: 3
-        })
-          .on("change", function () {
-            from.datepicker("option", "maxDate", getDate(this));
-          });
-
-      function getDate(element) {
-        var date;
-        try {
-          date = $.datepicker.parseDate(dateFormat, element.value);
-        } catch (error) {
-          date = null;
-        }
-
-        return date;
-      }
-    });
-  </script>
   <script>
     var root = document.body;
 
@@ -199,7 +181,10 @@
               m('h2', 'Accomodations'),
               m('div', { id: 'pickerdiv' },
                 m('label', "Number of Seats "),
-                m('input[type=range] min="0" max="100" value="1"', { id: 'seats' }),
+                m('br'),
+                m('br'),                
+                m('div', { id: 'slider'},
+                  m('div', { id: 'custom-handle' }, {class: 'ui-slider-handle' })),
                 m('br')),
               m('h2', 'Luxury'),
               m('div', { id: 'pickerdiv' },

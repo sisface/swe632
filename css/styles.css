@@ -186,9 +186,21 @@ body {
 	background-color: black;
 }
 
-/* radio buttons */
+/* range inputs */
 
+  #custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -2em;
+    text-align: center;
+    line-height: 1.6em;
+  }
 
+  #slider {
+    width: 25%;
+    margin-top: 25px;
+  }  
 
 /*advertisements*/
 
