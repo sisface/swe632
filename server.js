@@ -47,6 +47,17 @@ var airportSchema = new mongoose.Schema({
 
 var Airport = mongoose.model('airports', airportSchema);
 
+var userSchema = new mongoose.Schema({
+    fname: String,
+    lname: String,    
+    seatno: String,
+    ddate: Date,
+    adate: Date,
+    arrive: String,
+    depart: String
+});
+
+var User = mongoose.model('users', userSchema);
 
 // REST API REQUESTS
 // Functions to handle REST API requests.
@@ -61,6 +72,22 @@ function allAirports(req, res) {
 
 function airportById(req, res) {
     Airport.findById(req.params.id,
+        function (err, docs) {
+            if (err) return next(err);
+            res.send(docs);
+        });
+}
+
+function allUsers(req, res) {
+    User.find(
+        function(err, docs) {
+            if (err) return next(err);
+            res.send(docs);
+        });
+}
+
+function userById(req, res) {
+    User.findById(req.params.id,
         function (err, docs) {
             if (err) return next(err);
             res.send(docs);
@@ -87,3 +114,9 @@ router.get('/api/airport', allAirports);
 
 // Endpoint to get one airport, by _id.
 router.get('/api/airport/:id', airportById);
+
+// Endpoint to get all users.
+router.get('/api/user', allUsers);
+
+// Endpoint to get one user, by _id.
+router.get('/api/user/:id', userById);
