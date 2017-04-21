@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
   <meta charset='UTF-8' />
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
   <title>
     Macroexpand Travel: Buy Plane Tickets Online!
   </title>
-</head>
-<body>
   <script src='https://unpkg.com/mithril/mithril.js'></script>
-  <script type="text/javascript" src="jQuery-jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
   <script>
     $(function () {
       var dateFormat = "mm/dd/yy",
@@ -77,10 +79,11 @@
               m('p', 'A confirmation notice has been sent to the email address you provided.'),
               m('br'),
               m('div', { id: 'searchdiv' },
-                m('button', {onclick:
-                  function () {
-                    m.route.set('/mainPage', null, null);
-                  }, class: 'button2'
+                m('button', {
+                  onclick: function () {
+                            m.route.set('/mainPage', null, null);
+                          }, 
+                  class: 'button2'
                 }, 'Reserve Another Flight'))))
         ]);
       }
@@ -98,24 +101,25 @@
             m('div', { id: 'content' },
               m('h2', 'Available Flights'),
               m('div', { id: 'pickerdiv' },
-              m('p', 'Name: ', edmonton.name),
-              m('p', 'Country: ', edmonton.country),
-              m('p', 'Location: ', edmonton.location),
-              m('p', 'Code: ', edmonton.code)),
+                m('p', 'Name: ', edmonton.name),
+                m('p', 'Country: ', edmonton.country),
+                m('p', 'Location: ', edmonton.location),
+                m('p', 'Code: ', edmonton.code)),
               m('h2', 'Enter Customer Information'),
-              m('div', { id: 'pickerdiv' },       
+              m('div', { id: 'pickerdiv' },
                 m('label', "Coupon Code: "),
                 m('input[type=text]', {
-                })),                
-              m('br')),              
-              m('div', { id: 'searchdiv' },
-              m('button', {onclick:
-                function () {
-                  m.route.set('/confirmationPage', null, null);
-                }, class: 'button2'
+                })),
+              m('br')),
+            m('div', { id: 'searchdiv' },
+              m('button', {
+                onclick: function () {
+                          m.route.set('/confirmationPage', null, null);
+                        }, 
+                class: 'button2'
               }, 'Book Flight')),
-              m('div', { id: 'banner' },
-                m('img[src="img/farmers-market.jpg"]')))
+            m('div', { id: 'banner' },
+              m('img[src="img/farmers-market.jpg"]')))
         ]);
       }
     };
@@ -130,14 +134,14 @@
             m('hr'),
             m('hr:after'),
             m('div', { id: 'sidebar' },
-                m('img[src="img/wine-tour.jpg"]')),
+              m('img[src="img/wine-tour.jpg"]')),
             m('div', { id: 'content' },
               m('h2', 'Select Dates'),
               m('div', { id: 'pickerdiv' },
                 m('label', { id: 'from' }, 'Depart: '),
                 m('input', { id: 'from' }, 'from'),
-              m('br'),  
-              m('br'),     
+                m('br'),
+                m('br'),
                 m('label', { id: 'to' }, 'Arrive: '),
                 m('input', { id: 'to' }, 'to'),
                 m('br')),
@@ -146,34 +150,35 @@
               m('div', { id: 'pickerdiv' },
                 m('label', { id: 'from' }, 'Depart: '),
                 m('input', { id: 'from' }, 'from'),
-              m('br'),
-              m('br'),
+                m('br'),
+                m('br'),
                 m('label', { id: 'to' }, 'Arrive: '),
                 m('input', { id: 'to' }, 'to'),
-              m('br')),
-              m('br'),              
+                m('br')),
+              m('br'),
               m('h2', 'Accomodations'),
-              m('div', { id: 'pickerdiv' },   
+              m('div', { id: 'pickerdiv' },
                 m('label', "Number of Seats "),
-                  m('input[type=range] min="0" max="100" value="1"', { id: 'seats'}),         
-              m('br')),              
-              m('h2', 'Luxury'), 
-              m('div', { id: 'pickerdiv' },   
+                m('input[type=range] min="0" max="100" value="1"', { id: 'seats' }),
+                m('br')),
+              m('h2', 'Luxury'),
+              m('div', { id: 'pickerdiv' },
                 m('label', "First Class "),
-                  m('input[type=radio]', { id: 'lux'}),
-                m('br'),                 
+                m('input[type=radio]', { id: 'lux' }),
+                m('br'),
                 m('label', "Business Class "),
-                  m('input[type=radio]', { id: 'lux'}),
-                m('br'), 
+                m('input[type=radio]', { id: 'lux' }),
+                m('br'),
                 m('label', "Economy "),
-                  m('input[type=radio]', { id: 'lux'}),
-              m('br')),          
+                m('input[type=radio]', { id: 'lux' }),
+                m('br')),
               m('div', { id: 'searchdiv' },
-              m('button', {onclick:
-                function () {
-                  m.route.set('/checkoutPage', null, null);
-                }, class: 'button2'
-              }, 'Search Flights'))))
+                m('button', {
+                  onclick: function () {
+                             m.route.set('/checkoutPage', null, null);
+                          },
+                  class: 'button2'
+                }, 'Search Flights'))))
         ]);
       }
     };
@@ -186,7 +191,7 @@
               m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
               m('p', { class: 'p-header' }, 'Expand your horizons!')),
             m('hr'),
-            m('hr:after'),  
+            m('hr:after'),
             m('p', { class: 'p1' }, 'Discount online flight reservation booking and ticket purchases. Choose from hundreds of participating airlines from across the globe!'),
             m('br'),
             m('div', { class: 'photobanner' },
@@ -210,10 +215,11 @@
               m('img[src="img/image-h.JPG"]')),
             m('div', { id: 'searchdiv' },
               m('input', { class: 'search' }, 'input[type=text]'),
-              m('button', {onclick:
-                function () {
-                  m.route.set('/mainPage', null, null);
-                }, class: 'button'
+              m('button', {
+                onclick: function () {
+                          m.route.set('/mainPage', null, null);
+                        }, 
+                class: 'button'
               }, 'Search Flights!'))),
         ]);
       }
@@ -228,4 +234,5 @@
       });
   </script>
 </body>
+
 </html>
