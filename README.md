@@ -7,18 +7,17 @@ SOFTWARE NEEDED
 
 SETUP
 - Run: `npm install`.
-- Install Bootstrap: `npm i mithril-bootstrap-modal`
 - Install [MongoDB](http://docs.mongodb.com/manual/installation/) on your platform .
-- Create db: 
--- `cd /`
--- `sudo mkdir data`
--- `cd data`
--- `sudo mkdir db`
--- `ll`
--- `chmod 777 db`
--- `sudo chmod 777 db`
--- `cd ..`
--- `sudo chmod 777 data`
+- Create db using the following commands: 
+- `cd /`
+- `sudo mkdir data`
+- `cd data`
+- `sudo mkdir db`
+- `ll`
+- `chmod 777 db`
+- `sudo chmod 777 db`
+- `cd ..`
+- `sudo chmod 777 data`
 - Make sure MongoDB is running, then ingest data: `mongoimport --db production --collection airports airports.json --jsonArray`  (Note: only do this once).
 
 TO RUN
