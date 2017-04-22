@@ -23,9 +23,13 @@
            handle.text( ui.value );
          }
        });
-     } );
-     
+     } );     
     </script>
+    <script>
+     $( function() {
+       $( "#datepicker" ).datepicker();
+     } );
+  </script>    
   </head>
   <body>
     <script>
@@ -276,22 +280,22 @@
              m('div', { id: 'content' },
                m('h2', 'Select Dates'),
                m('div', { id: 'pickerdiv' },
-                 m('label', { id: 'from' }, 'Depart: '),
-                 m('input', { id: 'from' }, 'from'),
+                 m('label', { id: 'from' }, 'Depart: '), 
+                 m('input[type=text][id=datepicker]'),
                  m('br'),
                  m('br'),
                  m('label', { id: 'to' }, 'Arrive: '),
-                 m('input', { id: 'to' }, 'to'),
+                 m('input[type=text][id=datepicker]'),
                  m('br')),
                m('h2', 'Select Airports'),
                m('br'),
                m('div', { id: 'pickerdiv' },
                  m('label', { id: 'from' }, 'Depart: '),
-                 m('input', { id: 'from' }, 'from'),
+                 m('input[type=text][id=datepicker]'),
                  m('br'),
                  m('br'),
                  m('label', { id: 'to' }, 'Arrive: '),
-                 m('input', { id: 'to' }, 'to'),
+                 m('input[type=text][id=datepicker]'),
                  m('br')),
                m('br'),
                m('h2', 'Accomodations'),
