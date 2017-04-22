@@ -58,6 +58,57 @@
 
      // SITE PAGES
 
+     var PromotionsPage = {
+       view: function () {
+         return m('main', [
+           m('div', { id: 'container' },
+             m('header', { class: 'header' },
+               m('ul', { class:'sidenav' },
+                 m('li', m("a[href='/']", { config: m.route }, "Home")),
+                 m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
+                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
+                 m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
+               m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
+               m('p', { class: 'p-header' }, 'Expand your horizons!'),
+               m('br'),
+               m('br')),
+             m('hr'),
+             m('hr:after'),
+             m('div', { id: 'sidebar' },
+               m('img[src="img/wine-tour.jpg"]')),
+             m('div', { id: 'content' },
+               m('h1', 'Rewards Program Current Offers'),
+               m('div', { id: 'promodiv' },             
+                m('br'),
+                 m('p', 'Convert credits from the Macroexpand/United seat swapping program for cool rewards!'),           
+                m('br'),               
+                m('p', '(Limit one offer per customer per transaction.)'),
+                m('br'),
+                m('br'),     
+                m('br'),                  
+                m('p7', '0 Credits: 10% Discount for first-time customers.'),
+                m('br'),
+                m('p', 'Checkout Code: SAVE10.'),
+                m('br'),     
+                m('br'),                          
+                m('p7', '15 Credits: 5% Discount off total purchase.'),
+                m('br'),
+                m('p', 'Checkout Code: SAVE5.'),
+                m('br'),     
+                m('br'),  
+                m('p7', '5 Credits: $5 off in-flight movies.'),
+                m('br'),
+                m('p', 'Checkout Code: WATCHSTUFF.'),
+                m('br'),     
+                m('br'),  
+                m('p7', '1 Credit: $1 off airplane peanuts.'),
+                m('br'),
+                m('p', 'Checkout Code: EATPEANUTS.'),
+                m('br')))),
+         ]);
+       }
+     };     
+
      var SwapSeatsPage = {
        view: function () {
          return m('main', [
@@ -66,7 +117,8 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats"))),
+                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
+                 m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
                m('p', { class: 'p-header' }, 'Expand your horizons!'),
                m('br'),
@@ -123,7 +175,8 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats"))),
+                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
+                 m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
                m('p', { class: 'p-header' }, 'Expand your horizons!'),
                m('br'),
@@ -156,7 +209,8 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats"))),
+                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
+                 m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
                m('p', { class: 'p-header' }, 'Expand your horizons!'),
                m('br'),
@@ -189,7 +243,8 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats"))),
+                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
+                 m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
                m('p', { class: 'p-header' }, 'Expand your horizons!'),
                m('br'),
@@ -318,7 +373,8 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats"))),
+                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
+                 m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
                m('p', { class: 'p-header' }, 'Expand your horizons!'),
                m('br'),
@@ -395,7 +451,8 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats"))),
+                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
+                 m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
                m('p', { class: 'p-header' }, 'Expand your horizons!'),
              m('br'),
@@ -477,7 +534,6 @@
         } );     
 
       // DATEPICKER  
-
         $( function() {
           $( "#datepicker" ).datepicker();
         } );
@@ -495,7 +551,8 @@
                '/checkoutPage': CheckoutPage,
                '/confirmationPage': ConfirmationPage,
                '/swapSeatsPage': SwapSeatsPage,
-               '/SwapConfirmationPage': SwapConfirmationPage
+               '/SwapConfirmationPage': SwapConfirmationPage,
+               '/promotionsPage': PromotionsPage
              });
     </script>
   </body>

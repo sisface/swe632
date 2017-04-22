@@ -76,7 +76,7 @@ p {
     margin-left: auto;
     margin-right:auto;
     text-align: center;
-    color: blue;
+    color: purple;
     font: large Helvetica, Verdana, sans-serif;
     font-style: italic;
 }
@@ -98,7 +98,12 @@ p {
     margin-left: auto;
     margin-right:auto;
     text-align: center;
-    color: blue;
+    color: purple;
+    font: large Helvetica, Verdana, sans-serif;
+}
+
+p7 {
+    color: purple;
     font: large Helvetica, Verdana, sans-serif;
 }
 
