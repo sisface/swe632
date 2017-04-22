@@ -227,10 +227,14 @@
              m('div', { id: 'content' },
                m('h4', 'Available Flights'),
                m('div', { id: 'pickerdiv' },
-                 m('p', 'Name: ', ""), // TODO: Put value here.
-                 m('p', 'Country: ', ""), // TODO: Put value here.
-                 m('p', 'Location: ', ""), // TODO: Put value here.
-                 m('p', 'Code: ', "")), // TODO: Put value here.
+                 m('p', 'Airport: ', 'From ', 'INSERT MONGO', ' To', 'INSERT MONGO'), // TODO: Put value here.
+                 m('br'),                 
+                 m('p', 'Date: ', "04/27/2017"), // TODO: Put value here.
+                 m('p', 'Departing 21:00, arrives 04/28/2017 at 12:00'), // TODO: Put value here.
+                 m('br'),
+                 m('p', 'Seat Number: ', "34D"), // TODO: Put value here.
+                 m('br'),                 
+                 m('p', 'Flight Code: ', "INSERTMONGOID")), // TODO: Put value here.
                   m('p', { class:'p6' }, 'Enter the following information to continue to book the flight.'),
                 m('br'),
                 m('h4', 'Customer Information'),
