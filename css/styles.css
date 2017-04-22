@@ -191,7 +191,7 @@ ul.sidenav li a.active {
 }
 
 ul.sidenav li a:hover:not(.active) {
-    background-color: #555;
+    background-color: blue;
     color: white;
 }
 
@@ -223,10 +223,9 @@ div.content {
 
 /* search bar and buttons */
 
-.search {
-    padding:8px 20px;
+.typeahead {
     background:rgba(50, 50, 50, 0.2);
-    border:0px solid #dbdbdb;
+    border:2px solid #dbdbdb;
 }
 .button {
     position:relative;
@@ -235,6 +234,7 @@ div.content {
     background-color:#207cca;
     color:#fafafa;
     margin-bottom: 50px;
+    top: 6px;    
 }
 .button:hover  {
     background-color:#fafafa;
@@ -247,6 +247,15 @@ div.content {
     left:30%;
     border:2px solid #207cca;
     background-color:#207cca;
+    color:#fafafa;
+    margin-bottom: 50px;
+}
+.button3 {
+    position:relative;
+    padding:6px 15px;
+    left:30%;
+    border:2px solid #c42209;
+    background-color:#c42209;
     color:#fafafa;
     margin-bottom: 50px;
 }
@@ -263,7 +272,7 @@ input[type=TEXT] {
 }
 
 #text1 {
-    border: 2px solid rgb(173, 204, 204);
+    border: 1px solid #207cca;
     height: 31px;
     width: 223px;
     box-shadow: 0px 0px 27px rgb(204, 204, 204) inset;
@@ -495,7 +504,7 @@ input[type=TEXT] {
         margin-left: 0px;
     }
     100% {
-        margin-left: -2125px;
+        margin-left: -3500px;
     }
 }
 
@@ -504,7 +513,7 @@ input[type=TEXT] {
         margin-left: 0px;
     }
     100% {
-        margin-left: -2125px;
+        margin-left: -3500px;
     }
 }
 
@@ -513,7 +522,7 @@ input[type=TEXT] {
         margin-left: 0px;
     }
     100% {
-        margin-left: -2125px;
+        margin-left: -3500px;
     }
 }
 

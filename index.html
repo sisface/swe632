@@ -11,6 +11,7 @@
     <script src='https://unpkg.com/mithril/mithril.js'></script>
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.min.js"></script>
     <script>
      $( function() {
        var handle = $( "#custom-handle" );
@@ -22,25 +23,55 @@
            handle.text( ui.value );
          }
        });
-     } );
+     } );     
     </script>
+    <script>
+     $( function() {
+       $( "#datepicker" ).datepicker();
+     } );
+  </script>    
   </head>
   <body>
     <script>
      var root = document.body;
 
-     // TODO: Replace this test query.  The MongoID won't match on your system.
-     var edmonton = {};
-     function getEdmonton() {
+     // Typeahead completion
+     var allAirports = [];
+     function getAllAirports() {
        m.request({
          method: 'GET',
-         url: 'http://localhost:8080/api/airport/' + '58fa2278bcb58088908bd2b0',
+         url: 'http://localhost:8080/api/airport',
          withCredentials: true
        }).then(function (result) {
-         edmonton = result;
+         allAirports = result;
+         allAirports = allAirports.map(function (item) {
+           return item.name;
+         });
        });
      }
-     getEdmonton();
+     getAllAirports();
+
+     var substringMatcher = function(strs) {
+       return function findMatches(q, cb) {
+         var matches, substringRegex;
+
+         // an array that will be populated with substring matches
+         matches = [];
+
+         // regex used to determine if a string contains the substring `q`
+         substrRegex = new RegExp(q, 'i');
+
+         // iterate through the pool of strings and for any string that
+         // contains the substring `q`, add it to the `matches` array
+         $.each(strs, function(i, str) {
+           if (substrRegex.test(str)) {
+             matches.push(str);
+           }
+         });
+
+         cb(matches);
+       };
+     };
 
      var SwapSeatsPage = {
        view: function () {
@@ -78,7 +109,13 @@
                    m.route.set('/SwapConfirmationPage', null, null);
                  },
                  class: 'button2'
-               }, 'Swap Seats')),
+               }, 'Swap Seats'),
+                m('button', {
+                 onclick: function () {
+                   m.route.set('/splash', null, null);
+                 },
+                 class: 'button3'
+               }, 'Cancel')),
                m('br'),
                m('p4', '*All program volunteers are subject to frequent, violent beatings should they fail to comply with United Policies. Macroexpand Travel assumes no liability for bodily harm incurred by using this service, up to and including death.'),
                m('br'))
@@ -139,7 +176,7 @@
              m('div', { id: 'content' },
                m('h3', 'Your Swap Request has been submitted successfully!'),
                m('br'),
-               m('p', 'Your request will be reviewed. Please allow 24 - 48 business hours for swap confirmation.'),
+               m('p', 'Your request will be reviewed. Please allow 30 minutes for swap confirmation.'),
                m('br'),
                m('div', { id: 'searchdiv2' },
                  m('button', {
@@ -220,7 +257,15 @@
                    m.route.set('/confirmationPage', null, null);
                  },
                  class: 'button2'
-               }, 'Book Flight')),
+               }, 'Book Flight'), 
+                m('button', {
+                 onclick: function () {
+                   m.route.set('/splash', null, null);
+                 },
+                 class: 'button3'
+               }, 'Cancel'),
+               ) 
+               ,
              m('div', { id: 'banner' },
                m('img[src="img/farmers-market.jpg"]'))
            )
@@ -249,22 +294,22 @@
              m('div', { id: 'content' },
                m('h2', 'Select Dates'),
                m('div', { id: 'pickerdiv' },
-                 m('label', { id: 'from' }, 'Depart: '),
-                 m('input', { id: 'from' }, 'from'),
+                 m('label', { id: 'from' }, 'Depart: '), 
+                 m('input[type=text][id=datepicker]'),
                  m('br'),
                  m('br'),
                  m('label', { id: 'to' }, 'Arrive: '),
-                 m('input', { id: 'to' }, 'to'),
+                 m('input[type=text][id=datepicker]'),
                  m('br')),
                m('h2', 'Select Airports'),
                m('br'),
                m('div', { id: 'pickerdiv' },
                  m('label', { id: 'from' }, 'Depart: '),
-                 m('input', { id: 'from' }, 'from'),
+                 m('input[type=text][id=datepicker]'),
                  m('br'),
                  m('br'),
                  m('label', { id: 'to' }, 'Arrive: '),
-                 m('input', { id: 'to' }, 'to'),
+                 m('input[type=text][id=datepicker]'),
                  m('br')),
                m('br'),
                m('h2', 'Accomodations'),
@@ -294,7 +339,13 @@
                    m.route.set('/checkoutPage', null, null);
                  },
                  class: 'button2'
-               }, 'Search Flights')))
+               }, 'Search Flights'),
+                m('button', {
+                 onclick: function () {
+                   m.route.set('/splash', null, null);
+                 },
+                 class: 'button3'
+               }, 'Cancel'),))
          ]);
        }
      };
@@ -336,21 +387,38 @@
                m('img[src="img/image-g.JPG"]'),
                m('img[src="img/image-h.JPG"]')),
              m('br'),
+             m('p', { class: 'p5' }, 'Not happy with your assigned seat? No problem! Swap your seat with other interested passengers on your flight using our unique flight credit system.'),
+             m('div', { id: 'linkdiv' },
+               m("a[href='/#!/swapSeatsPage']", {config: m.route}, 'Click here to learn more!')),
+               m('br'),
+               m('br'),          
              m('div', { id: 'searchdiv' },
-               m('input', { class: 'search' }, 'input[type=text]'),
+               m('input[type=text]', { class: 'typeahead' }),
                m('button', {
                  onclick: function () {
                    m.route.set('/mainPage', null, null);
                  },
                  class: 'button'
                }, 'Search Flights!')),
-             m('p', { class: 'p5' }, 'Not happy with your assigned seat? No problem! Swap your seat with other interested passengers on your flight using our unique flight credit system.'),             
-             m('div', { id: 'linkdiv' },
-               m("a[href='/#!/swapSeatsPage']", {config: m.route}, 'Click here to learn more!')),
+               m('br'),
+               m('br'),               
+               m('br'),
+               m('br'),
+               m('br'),               
+               m('br'),             
                m('br')),
          ]);
        }
      };
+
+     $(document).ready(function () {
+           $('.typeahead').typeahead({
+             hint: true,
+             highlight: true,
+             minLength: 1
+           }, { name: 'allAirports',
+                source: substringMatcher(allAirports)});
+       });
 
      m.route(root, '/splash',
              {
@@ -363,5 +431,4 @@
              });
     </script>
   </body>
-
 </html>
