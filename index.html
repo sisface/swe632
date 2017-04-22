@@ -16,7 +16,8 @@
     <script>
      var root = document.body;
 
-     // GET MONGO DATA            
+     // A variable that will store the user/schedule state of the session.
+     var state = {}; 
 
      // TYPEAHEAD AUTO COMPLETION
      var allAirports = [];
@@ -56,7 +57,21 @@
        };
      };
 
-     // SITE PAGES
+     // Grab all users and keep them in memory.
+     var allUsers = [];
+     function getAllUsers () {
+       m.request({
+         method: 'GET',
+         url: 'http://localhost:8080/api/user',
+         withCredentials: true
+       }).then(function (result) {
+         allUsers = result;
+       });
+     }
+     getAllUsers();
+
+
+     // SITE SCREENS
 
      var PromotionsPage = {
        view: function () {
@@ -81,7 +96,7 @@
                m('h1', 'Rewards Program Current Offers'),
                m('div', { id: 'promodiv' },             
                 m('br'),
-                 m('p', 'Convert credits from the Macroexpand/United seat swapping program for cool rewards!'),           
+                 m('p', 'Convert credits from the Macroexpand/United Seat Swapping Program for AWESOME rewards!'),           
                 m('br'),               
                 m('p', '(Limit one offer per customer per transaction.)'),
                 m('br'),
@@ -146,13 +161,13 @@
                           m('input[type=text]', {id: 'text1' })))),                                             
                  m('br')),
              m('h4', 'Available Seats'),
-               m('br'),  
+               m('br'), 
                m('p', 'Name: INSERT MONGO'),
                m('p', 'Seat Number: INSERT MONGO')),
              m('div', { id: 'searchdiv' },
                m('button', {
                  onclick: function () {
-                   m.route.set('/SwapConfirmationPage', null, null);
+                   m.route.set('/swapConfirmationPage', null, null);
                  },
                  class: 'button2'
                }, 'Swap Seats'),
@@ -278,9 +293,9 @@
              m('div', { id: 'sidebar2' },
                m('img[src="img/yoga-retreat.jpg"]')),
              m('div', { id: 'content' },
-               m('h3', 'Thank you for your purchase.'),
+               m('h3', 'Thank you for your purchase, ', state.myname, '.'),
                m('br'),
-               m('p', 'A confirmation notice has been sent to the email address you provided.'),
+               m('p', 'A confirmation notice has been sent to the email address you provided: ', state.myemail,'.'),
                m('br'),
                m('div', { id: 'searchdiv2' },
                  m('button', {
@@ -354,12 +369,13 @@
              m('div', { id: 'content' },
                m('h4', 'Available Flights'),
                m('div', { id: 'pickerdiv' },
-                 m('p', 'Airport: ', 'From ', 'INSERT MONGO', ' To ', 'INSERT MONGO'), // TODO: Put value here.
+                 m('p', 'Departing from ', state.airdept),
+                 m('p', 'Arriving at ', state.airarr),
                  m('br'),                 
-                 m('p', 'Date: ', "04/27/2017"), // TODO: Put value here.
-                 m('p', 'Departing 21:00, arrives 04/28/2017 at 12:00'), // TODO: Put value here.
+                 m('p', 'Departure date: ', state.datedept),
+                 m('p', 'Arrival date: ', state.datearr),
                  m('br'),
-                 m('p', 'Seat Number: ', "34D"), // TODO: Put value here.
+                 m('p', 'Seat Number: ', "34D"),
                  m('br'),                 
                  m('p', 'Flight Code: ', "INSERTMONGOID")), // TODO: Put value here.
                   m('p', { class:'p6' }, 'Enter the following information to continue to book the flight.'),
@@ -373,13 +389,13 @@
                           m('label', "Name: ")))),
                       m('tr',                        
                           m('td',
-                          m('input[type=text][placeholder=Full Name]', {id: 'text1' }))),                                             
+                          m('input[type=text]', { id: 'myname' }))),   
                       m('tr',
                         m('td',
                           m('label', "Email Address: ")))),
                       m('tr',                        
                         m('td',
-                          m('input[type=text][placeholder=john_doe@email.com]', {id: 'text1' }))), 
+                          m('input[type=text]', {id: 'myemail' }))), 
                  m('br')),
                m('h4', 'Payment Information'),
             	m('div', { class: 'card-row' },
@@ -448,6 +464,8 @@
              m('div', { id: 'searchdiv' },
                m('button', {
                  onclick: function () {
+                   state.myname = $('#myname').val();
+                   state.myemail = $('#myemail').val();
                    m.route.set('/confirmationPage', null, null);
                  },
                  class: 'button2'
@@ -504,11 +522,11 @@
                m('br'),
                m('div', { id: 'pickerdiv' },
                  m('label', { id: 'from' }, 'Depart: '),
-                 m('input[type=text][placeholder=e.g. Dulles][class=typeahead]'),
+                 m('input[type=text][class=typeahead][id=airdept]'),
                  m('br'),
                  m('br'),                
                  m('label', { id: 'to' }, 'Arrives: '),
-                 m('input[type=text][placeholder=e.g. JFK][class=typeahead]'),                                
+                 m('input[type=text][class=typeahead][id=airarr][value=Edmonton International Airport]'),
                  m('br')),
                m('br'),
                m('h2', 'Accomodations'),
@@ -535,6 +553,10 @@
              m('div', { id: 'searchdiv' },
                m('button', {
                  onclick: function () {
+                   state.datedept = $('#datepicker').val();
+                   state.datearr = $('#datepicker2').val();
+                   state.airdept = $('#airdept').val();
+                   state.airarr = $('#airarr').val();
                    m.route.set('/checkoutPage', null, null);
                  },
                  class: 'button2'
@@ -571,6 +593,8 @@
              m('hr:after'),
              m('p', { class: 'p1' }, 'Discount online flight reservation booking, ticket purchases, change flights, and seat swapping. Choose flights from hundreds of participating airlines from across the globe.'),
              m('br'),
+             m('p', { class: 'p1' }, 'Just enter your destination to get started on your next big adventure.'),
+             m('br'),             
              m('div', { class: 'photobanner' },
                m('img[src="img/image-a.JPG"]', { class: 'banner-img' }),
                m('img[src="img/image-b.JPG"]'),
@@ -602,10 +626,11 @@
                m('br'),
                m('br'),          
              m('div', { id: 'searchdiv' },
-               m('input[type=text][placeholder=e.g. Delta]', { class: 'typeahead' }),
+               m('input[type=text][id=airarr]', { class: 'typeahead' }),
                m('button', {
                  onclick: function () {
-                   m.route.set('/mainPage', null, null);
+                   state.airarr = $('#airarr').val();
+                   m.route.set('/mainPage');
                  },
                  class: 'button'
                }, 'Search Flights!')),
@@ -619,7 +644,8 @@
                m('br'),             
                m('br')),
          ]);
-       }
+       },
+       render: function () { $(document).ready(); }
      };
 
      // AUTOCOMPLETE 
@@ -629,9 +655,10 @@
              highlight: true,
              minLength: 1
            }, { name: 'allAirports',
-                source: substringMatcher(allAirports)});
+                source: substringMatcher(allAirports)}
+                );
 
-    // SLIDER
+     // SLIDER
        $( function() {
        var handle = $( "#custom-handle" );
        $( "#slider" ).slider({
@@ -644,14 +671,14 @@
           });
         } );     
 
-      // DATEPICKER  
+     // DATEPICKER  
         $( function() {
           $( "#datepicker" ).datepicker();
         } );
 
         $( function() {
           $( "#datepicker2" ).datepicker();
-        } );    
+        });
     });
 
      // ROUTES
@@ -662,8 +689,7 @@
                '/checkoutPage': CheckoutPage,
                '/confirmationPage': ConfirmationPage,
                '/swapSeatsPage': SwapSeatsPage,
-               '/SwapConfirmationPage': SwapConfirmationPage,
-
+               '/swapConfirmationPage': SwapConfirmationPage,
                '/ChangeFlightPage': ChangeFlightPage,
                '/ChangeConfirmationPage': ChangeConfirmationPage,
                '/promotionsPage': PromotionsPage
