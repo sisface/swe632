@@ -258,6 +258,15 @@ div.content {
     color:#fafafa;
     margin-bottom: 50px;
 }
+.button3 {
+    position:relative;
+    padding:6px 15px;
+    left:30%;
+    border:2px solid #c42209;
+    background-color:#c42209;
+    color:#fafafa;
+    margin-bottom: 50px;
+}
 .button:hover2  {
     background-color:#fafafa;
     color:#207cca;

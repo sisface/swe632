@@ -41,6 +41,7 @@
      $( function() {
        $( "#datepicker4" ).datepicker();
      } );               
+
   </script>    
   </head>
   <body>
@@ -121,7 +122,13 @@
                    m.route.set('/SwapConfirmationPage', null, null);
                  },
                  class: 'button2'
-               }, 'Swap Seats')),
+               }, 'Swap Seats'),
+                m('button', {
+                 onclick: function () {
+                   m.route.set('/splash', null, null);
+                 },
+                 class: 'button3'
+               }, 'Cancel')),
                m('br'),
                m('p4', '*All program volunteers are subject to frequent, violent beatings should they fail to comply with United Policies. Macroexpand Travel assumes no liability for bodily harm incurred by using this service, up to and including death.'),
                m('br'))
@@ -261,7 +268,15 @@
                    m.route.set('/confirmationPage', null, null);
                  },
                  class: 'button2'
-               }, 'Book Flight')),
+               }, 'Book Flight'), 
+                m('button', {
+                 onclick: function () {
+                   m.route.set('/splash', null, null);
+                 },
+                 class: 'button3'
+               }, 'Cancel'),
+               ) 
+               ,
              m('div', { id: 'banner' },
                m('img[src="img/farmers-market.jpg"]'))
            )
@@ -295,12 +310,18 @@
                  m('br'),
                  m('br'),
                  m('label', { id: 'to' }, 'Arrive: '),
+                 m('input[type=text][id=datepicker]'),
                  m('input[type=text][id=datepicker2]'),
                  m('br')),
                m('h2', 'Select Airports'),
                m('br'),
                m('div', { id: 'pickerdiv' },
                  m('label', { id: 'from' }, 'Depart: '),
+                 m('input[type=text][id=datepicker]'),
+                 m('br'),
+                 m('br'),
+                 m('label', { id: 'to' }, 'Arrive: '),
+                 m('input[type=text][id=datepicker]'),
                  m('input[type=text][id=datepicker3]'),
                  m('br'),
                  m('br'),
@@ -335,7 +356,13 @@
                    m.route.set('/checkoutPage', null, null);
                  },
                  class: 'button2'
-               }, 'Search Flights')))
+               }, 'Search Flights'),
+                m('button', {
+                 onclick: function () {
+                   m.route.set('/splash', null, null);
+                 },
+                 class: 'button3'
+               }, 'Cancel'),))
          ]);
        }
      };
