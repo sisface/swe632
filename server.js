@@ -50,11 +50,7 @@ var Airport = mongoose.model('airports', airportSchema);
 var userSchema = new mongoose.Schema({
     fname: String,
     lname: String,    
-    seatno: String,
-    ddate: Date,
-    adate: Date,
-    arrive: String,
-    depart: String
+    seatno: String
 });
 
 var User = mongoose.model('users', userSchema);

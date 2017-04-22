@@ -94,6 +94,14 @@ p {
     font-style: italic;
 }
 
+.p6 {
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+    color: black;
+    font: large Helvetica, Verdana, sans-serif;
+}
+
 label {
     font: large Helvetica, Verdana, sans-serif;
 }
