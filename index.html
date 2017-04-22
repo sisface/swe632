@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang='en'>
-
   <head>
     <meta charset='UTF-8' name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
@@ -32,15 +31,7 @@
 
      $( function() {
        $( "#datepicker2" ).datepicker();
-     } );
-
-     $( function() {
-       $( "#datepicker3" ).datepicker();
-     } );
-
-     $( function() {
-       $( "#datepicker4" ).datepicker();
-     } );               
+     } );              
 
   </script>    
   </head>
@@ -48,7 +39,9 @@
     <script>
      var root = document.body;
 
-     // Typeahead completion
+     // GET MONGO DATA            
+
+     // TYPEAHEAD AUTO COMPLETION
      var allAirports = [];
      function getAllAirports() {
        m.request({
@@ -68,14 +61,14 @@
        return function findMatches(q, cb) {
          var matches, substringRegex;
 
-         // an array that will be populated with substring matches
+         // An array that will be populated with substring matches.
          matches = [];
 
-         // regex used to determine if a string contains the substring `q`
+         // Regex used to determine if a string contains the substring `q`.
          substrRegex = new RegExp(q, 'i');
 
-         // iterate through the pool of strings and for any string that
-         // contains the substring `q`, add it to the `matches` array
+         // Iterate through the pool of strings and for any string that
+         // contains the substring `q`, add it to the `matches` array.
          $.each(strs, function(i, str) {
            if (substrRegex.test(str)) {
              matches.push(str);
@@ -85,6 +78,8 @@
          cb(matches);
        };
      };
+
+     // SITE PAGES
 
      var SwapSeatsPage = {
        view: function () {
@@ -227,7 +222,7 @@
              m('div', { id: 'content' },
                m('h4', 'Available Flights'),
                m('div', { id: 'pickerdiv' },
-                 m('p', 'Airport: ', 'From ', 'INSERT MONGO', ' To', 'INSERT MONGO'), // TODO: Put value here.
+                 m('p', 'Airport: ', 'From ', 'INSERT MONGO', ' To ', 'INSERT MONGO'), // TODO: Put value here.
                  m('br'),                 
                  m('p', 'Date: ', "04/27/2017"), // TODO: Put value here.
                  m('p', 'Departing 21:00, arrives 04/28/2017 at 12:00'), // TODO: Put value here.
@@ -476,6 +471,7 @@
        }
      };
 
+     // AUTOCOMPLETE 
      $(document).ready(function () {
            $('.typeahead').typeahead({
              hint: true,
@@ -485,6 +481,7 @@
                 source: substringMatcher(allAirports)});
        });
 
+     // ROUTES
      m.route(root, '/splash',
              {
                '/splash': Splash,
