@@ -242,7 +242,6 @@ div.content {
 /* search bar and buttons */
 
 .typeahead {
-    background:rgba(50, 50, 50, 0.2);
     border:2px solid #dbdbdb;
 }
 .button {
