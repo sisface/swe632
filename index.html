@@ -292,6 +292,11 @@
                m('img[src="img/image-g.JPG"]'),
                m('img[src="img/image-h.JPG"]')),
              m('br'),
+             m('p', { class: 'p5' }, 'Not happy with your assigned seat? No problem! Swap your seat with other interested passengers on your flight using our unique flight credit system.'),
+             m('div', { id: 'linkdiv' },
+               m("a[href='/#!/swapSeatsPage']", {config: m.route}, 'Click here to learn more!')),
+               m('br'),
+               m('br'),          
              m('div', { id: 'searchdiv' },
                m('input[type=text]', { class: 'typeahead' }),
                m('button', {
@@ -300,9 +305,12 @@
                  },
                  class: 'button'
                }, 'Search Flights!')),
-             m('p', { class: 'p5' }, 'Not happy with your assigned seat? No problem! Swap your seat with other interested passengers on your flight using our unique flight credit system.'),
-             m('div', { id: 'linkdiv' },
-               m("a[href='/#!/swapSeatsPage']", {config: m.route}, 'Click here to learn more!')),
+               m('br'),
+               m('br'),               
+               m('br'),
+               m('br'),
+               m('br'),               
+               m('br'),             
                m('br')),
          ]);
        }
