@@ -10,30 +10,7 @@
     <script src='https://unpkg.com/mithril/mithril.js'></script>
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.min.js"></script>
-    <script>
-     $( function() {
-       var handle = $( "#custom-handle" );
-       $( "#slider" ).slider({
-         create: function() {
-           handle.text( $( this ).slider( "value" ) );
-         },
-         slide: function( event, ui ) {
-           handle.text( ui.value );
-         }
-       });
-     } );     
-    </script>
-    <script>
-     $( function() {
-       $( "#datepicker" ).datepicker();
-     } );
-
-     $( function() {
-       $( "#datepicker2" ).datepicker();
-     } );              
-
-  </script>    
+    <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.min.js"></script>   
   </head>
   <body>
     <script>
@@ -479,7 +456,30 @@
              minLength: 1
            }, { name: 'allAirports',
                 source: substringMatcher(allAirports)});
-       });
+
+    // SLIDER
+       $( function() {
+       var handle = $( "#custom-handle" );
+       $( "#slider" ).slider({
+         create: function() {
+           handle.text( $( this ).slider( "value" ) );
+         },
+         slide: function( event, ui ) {
+           handle.text( ui.value );
+            }
+          });
+        } );     
+
+      // DATEPICKER  
+
+        $( function() {
+          $( "#datepicker" ).datepicker();
+        } );
+
+        $( function() {
+          $( "#datepicker2" ).datepicker();
+        } );    
+    });
 
      // ROUTES
      m.route(root, '/splash',
