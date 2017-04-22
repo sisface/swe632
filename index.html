@@ -316,12 +316,9 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-
-                 m('li', m("a[href='/#!/ChangeFlightPage']", { config: m.route }, "Change Flight")),
-        
+                 m('li', m("a[href='/#!/ChangeFlightPage']", { config: m.route }, "Change Flight")),        
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                  m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
-
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
                m('p', { class: 'p-header' }, 'Expand your horizons!'),
                m('br'),
@@ -354,12 +351,9 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-
                  m('li', m("a[href='/#!/ChangeFlightPage']", { config: m.route }, "Change Flight")),
-
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                  m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
-
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
                m('p', { class: 'p-header' }, 'Expand your horizons!'),
                m('br'),
@@ -513,9 +507,7 @@
                  m('input[type=text][placeholder=MM/DD/YYYY][id=datepicker]'),
                  m('br'),
                  m('br'),
-
                  m('label', { id: 'to' }, 'Arrives: '),
-
                  m('input[type=text][placeholder=MM/DD/YYYY][id=datepicker2]'),                  
                  m('br')),
                m('h2', 'Select Airports'),
@@ -579,12 +571,9 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-
                  m('li', m("a[href='/#!/ChangeFlightPage']", { config: m.route }, "Change Flight")),
-
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                  m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
-
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
                m('p', { class: 'p-header' }, 'Expand your horizons!'),
              m('br'),
@@ -690,10 +679,9 @@
                '/confirmationPage': ConfirmationPage,
                '/swapSeatsPage': SwapSeatsPage,
                '/swapConfirmationPage': SwapConfirmationPage,
-               '/ChangeFlightPage': ChangeFlightPage,
-               '/ChangeConfirmationPage': ChangeConfirmationPage,
+               '/changeFlightPage': ChangeFlightPage,
+               '/changeConfirmationPage': ChangeConfirmationPage,
                '/promotionsPage': PromotionsPage
-
              });
     </script>
   </body>
