@@ -220,10 +220,9 @@ div.content {
 
 /* search bar and buttons */
 
-.search {
-    padding:8px 20px;
+.typeahead {
     background:rgba(50, 50, 50, 0.2);
-    border:0px solid #dbdbdb;
+    border:2px solid #dbdbdb;
 }
 .button {
     position:relative;
@@ -232,6 +231,7 @@ div.content {
     background-color:#207cca;
     color:#fafafa;
     margin-bottom: 50px;
+    top: 6px;    
 }
 .button:hover  {
     background-color:#fafafa;
