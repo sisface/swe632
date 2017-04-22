@@ -75,7 +75,7 @@
              m('div', { id: 'searchdiv' },
                m('button', {
                  onclick: function () {
-                   m.route.set('/confirmationPage', null, null);
+                   m.route.set('/SwapConfirmationPage', null, null);
                  },
                  class: 'button2'
                }, 'Swap Seats')),
@@ -107,6 +107,39 @@
                m('h3', 'Thank you for your purchase.'),
                m('br'),
                m('p', 'A confirmation notice has been sent to the email address you provided.'),
+               m('br'),
+               m('div', { id: 'searchdiv2' },
+                 m('button', {
+                   onclick: function () {
+                     m.route.set('/mainPage', null, null);
+                   },
+                   class: 'button2'
+                 }, 'Reserve Another Flight'))))
+         ]);
+       }
+     };
+     
+     var SwapConfirmationPage = {
+       view: function () {
+         return m('main', [
+           m('div', { id: 'container' },
+             m('header', { class: 'header' },
+               m('ul', { class:'sidenav' },
+                 m('li', m("a[href='/']", {config: m.route}, "Home")),
+                 m('li', m("a[href='/#!/mainPage']", {config: m.route}, "Search Flights")),
+                 m('li', m("a[href='/#!/swapSeatsPage']", {config: m.route}, "Swap Seats"))),
+               m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
+               m('p', { class: 'p-header' }, 'Expand your horizons!'),
+               m('br'),
+               m('br')),
+             m('hr'),
+             m('hr:after'),
+             m('div', { id: 'sidebar2' },
+               m('img[src="img/yoga-retreat.jpg"]')),
+             m('div', { id: 'content' },
+               m('h3', 'Your Swap Request has been submitted successfully!'),
+               m('br'),
+               m('p', 'Your request will be reviewed. Please allow 24 - 48 business hours for swap confirmation.'),
                m('br'),
                m('div', { id: 'searchdiv2' },
                  m('button', {
@@ -236,6 +269,10 @@
          return ('main', [
            m('div', { id: 'container' },
              m('header', { class: 'header' },
+               m('ul', { class:'sidenav' },
+                 m('li', m("a[href='/']", {config: m.route}, "Home")),
+                 m('li', m("a[href='/#!/mainPage']", {config: m.route}, "Search Flights")),
+                 m('li', m("a[href='/#!/swapSeatsPage']", {config: m.route}, "Swap Seats"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
                m('p', { class: 'p-header' }, 'Expand your horizons!'),
              m('br'),
@@ -286,7 +323,8 @@
                '/mainPage': MainPage,
                '/checkoutPage': CheckoutPage,
                '/confirmationPage': ConfirmationPage,
-               '/swapSeatsPage': SwapSeatsPage
+               '/swapSeatsPage': SwapSeatsPage,
+               '/SwapConfirmationPage': SwapConfirmationPage
              });
     </script>
   </body>
