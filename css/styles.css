@@ -23,7 +23,10 @@ header-h1 {
     font: xx-large Helvetica, Verdana, sans-serif;
     color:black;
 }
-
+h1 {
+    color: black;
+    font: xx-large Helvetica, Verdana, sans-serif;
+}
 h2 {
     color: black;
     font: larger Helvetica, Verdana, sans-serif;
