@@ -21,6 +21,7 @@
 
      // TYPEAHEAD AUTO COMPLETION
      var allAirports = [];
+     var allAirportObjs = [];
      function getAllAirports() {
        m.request({
          method: 'GET',
@@ -28,6 +29,7 @@
          withCredentials: true
        }).then(function (result) {
          allAirports = result;
+         allAirportObjs = result;
          allAirports = allAirports.map(function (item) {
            return item.name;
          });
@@ -80,7 +82,7 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                   m('li', m("a[href='/#!/ChangeFlightPage']", { config: m.route }, "Change Flight")),  
+                   m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),  
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                  m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
@@ -132,7 +134,7 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                  m('li', m("a[href='/#!/ChangeFlightPage']", { config: m.route }, "Change Flight")),             
+                  m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),             
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                  m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
@@ -193,7 +195,7 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                 m('li', m("a[href='/#!/ChangeFlightPage']", { config: m.route }, "Change Flight")),
+                 m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                   m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
@@ -205,7 +207,7 @@
              m('div', { id: 'content' },
                m('h1', 'Change Your Flights'),
                m('div', { id: 'pickerdiv' },
-                 m('p', 'Enter your flight code to search for available another flight.'),
+                 m('p', 'Need to alter your flight plans? Simply enter your flight code to search for another available flight to the same destination.'),
                  m('br'),
                    m('form',
                     m('table',
@@ -217,13 +219,15 @@
                           m('input[type=text]', {id: 'text1' })))),                                             
                  m('br')),
              m('h4', 'Available Flights'),
-               m('br'),  
-               m('p', 'Name: INSERT MONGO'),
-               m('p', 'Seat Number: INSERT MONGO')),
+               m('br'),             
+               m('table',
+                m('tbody', {id: "tbody2"})),
+               m('br'),
+               m('br')), 
              m('div', { id: 'searchdiv' },
                m('button', {
                  onclick: function () {
-                   m.route.set('/ChangeConfirmationPage', null, null);
+                   m.route.set('/changeConfirmationPage', null, null);
                  },
                  class: 'button2'
                }, 'Change Flight'),
@@ -246,7 +250,7 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                 m('li', m("a[href='/#!/ChangeFlightPage']", { config: m.route }, "Change Flight")),
+                 m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                   m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
@@ -258,9 +262,9 @@
              m('div', { id: 'sidebar2' },
                m('img[src="img/yoga-retreat.jpg"]')),
              m('div', { id: 'content' },
-               m('h3', 'Your Flight Change Request has been submitted successfully!'),
+               m('h3', 'Your flight change request has been submitted successfully!'),
                m('br'),
-               m('p', 'Your request will be reviewed. Please allow 30 minutes for change confirmation.'),
+               m('p', 'Your request will be reviewed. Please allow 30 minutes for change confirmation to be emailed to you.'),
                m('br'),
                m('div', { id: 'searchdiv2' },
                  m('button', {
@@ -273,7 +277,6 @@
        }
      };
 
-
      var ConfirmationPage = {
        view: function () {
          return m('main', [
@@ -282,7 +285,7 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                 m('li', m("a[href='/#!/ChangeFlightPage']", { config: m.route }, "Change Flight")),
+                 m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),
                 m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                  m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
@@ -317,7 +320,7 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                 m('li', m("a[href='/#!/ChangeFlightPage']", { config: m.route }, "Change Flight")),        
+                 m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),        
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                  m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
@@ -352,7 +355,7 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                 m('li', m("a[href='/#!/ChangeFlightPage']", { config: m.route }, "Change Flight")),
+                 m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                  m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
@@ -372,7 +375,7 @@
                  m('br'),
                  m('p', 'Seat Number: ', "34D"),
                  m('br'),                 
-                 m('p', 'Flight Code: ', "INSERTMONGOID")), // TODO: Put value here.
+                 m('p', 'Flight Code: ', "EDM34645600")),
                   m('p', { class:'p6' }, 'Enter the following information to continue to book the flight.'),
                 m('br'),
                 m('h4', 'Customer Information'),
@@ -492,12 +495,9 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-
                  m('li', m("a[href='/#!/ChangeFlightPage']", { config: m.route }, "Change Flight")),
-
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                  m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
-
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
                m('p', { class: 'p-header' }, 'Expand your horizons!'),
                m('br'),
@@ -578,7 +578,7 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                 m('li', m("a[href='/#!/ChangeFlightPage']", { config: m.route }, "Change Flight")),
+                 m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                  m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
@@ -638,7 +638,7 @@
                m('br'),
                m('br'),               
                m('br'),             
-               m('br')),
+               m('br'))
          ]);
        },
        render: function () { $(document).ready(); }
@@ -672,6 +672,18 @@
           }
         }
       });
+
+     // MONGO AIRPORTS
+      $( "#tbody" ).ready(function() {
+        if (document.getElementById('tbody2') != null) {
+          var tbody = document.getElementById('tbody2');
+          for (var i = 0; i < 5; i++) {
+              var tr = "<tr>";
+              tr += "<td>" + allAirportObjs[i].name + "</td>" + "<td>" + allAirportObjs[i].code + "</td>" + "<td>" + allAirportObjs[i].country + "</td>" + "<td>" + allAirportObjs[i].location + "</td>" + "<td>" + "<input type=checkbox class=checkbox />" + "</td></tr>";
+              tbody.innerHTML += tr;
+          }
+        }
+      });      
 
      // DATEPICKER 
      $( "#datepicker" ).ready(function() {
