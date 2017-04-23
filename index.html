@@ -70,7 +70,6 @@
      }
      getAllUsers();
 
-
      // SITE SCREENS
 
      var PromotionsPage = {
@@ -161,9 +160,11 @@
                           m('input[type=text]', {id: 'text1' })))),                                             
                  m('br')),
              m('h4', 'Available Seats'),
-               m('br'), 
-               m('p', 'Name: INSERT MONGO'),
-               m('p', 'Seat Number: INSERT MONGO')),
+               m('br'),             
+               m('table',
+                m('tbody', {id: "tbody"})),
+               m('br'),
+               m('br'),                               
              m('div', { id: 'searchdiv' },
                m('button', {
                  onclick: function () {
@@ -179,7 +180,7 @@
                }, 'Cancel')),
                m('br'),
                m('p4', '*All program volunteers are subject to frequent, violent beatings should they fail to comply with United Policies. Macroexpand Travel assumes no liability for bodily harm incurred by using this service, up to and including death.'),
-               m('br'))
+               m('br')))
          ]);
        }
      };
@@ -645,13 +646,6 @@
 
      // AUTOCOMPLETE 
      $(document).ready(function () {
-           $('.typeahead').typeahead({
-             hint: true,
-             highlight: true,
-             minLength: 1
-           }, { name: 'allAirports',
-                source: substringMatcher(allAirports)}
-                );
 
      // SLIDER
        $( function() {
@@ -664,17 +658,36 @@
            handle.text( ui.value );
             }
           });
-        } );     
+        } );    
+    });
 
-     // DATEPICKER  
-        $( function() {
+     // MONGO USERS
+      $( "#tbody" ).ready(function() {
+        if (document.getElementById('tbody') != null) {
+          var tbody = document.getElementById('tbody');
+          for (var i = 0; i < allUsers.length; i++) {
+              var tr = "<tr>";
+              tr += "<td>" + allUsers[i].lname + ", " + allUsers[i].fname + "</td>" + "<td>" + allUsers[i].seatno + "</td>" + "<td>" + "<input type=checkbox />" + "</td></tr>";
+              tbody.innerHTML += tr;
+          }
+        }
+      });
+
+     // DATEPICKER 
+     $( "#datepicker" ).ready(function() {
           $( "#datepicker" ).datepicker();
-        } );
-
-        $( function() {
+        });
+     $( "#datepicker2" ).ready(function() {
           $( "#datepicker2" ).datepicker();
         });
-    });
+     $('.typeahead').ready(function () {
+      $('.typeahead').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+      }, { name: 'allAirports',
+          source: substringMatcher(allAirports)}
+          );});
 
      // ROUTES
      m.route(root, '/splash',
@@ -688,7 +701,7 @@
                '/changeFlightPage': ChangeFlightPage,
                '/changeConfirmationPage': ChangeConfirmationPage,
                '/promotionsPage': PromotionsPage
-             });
+             });          
     </script>
   </body>
 </html>
