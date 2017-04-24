@@ -10,14 +10,14 @@
     <script src='https://unpkg.com/mithril/mithril.js'></script>
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.min.js"></script>   
+    <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.min.js"></script>
   </head>
   <body>
     <script>
      var root = document.body;
 
      // A variable that will store the user/schedule state of the session.
-     var state = {}; 
+     var state = {};
 
      // TYPEAHEAD AUTO COMPLETION
      var allAirports = [];
@@ -82,7 +82,7 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                   m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),  
+                   m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                  m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
@@ -95,36 +95,35 @@
                m('img[src="img/wine-tour.jpg"]')),
              m('div', { id: 'content' },
                m('h1', 'Rewards Program Current Offers'),
-               m('div', { id: 'promodiv' },             
+               m('div', { id: 'promodiv' },
                 m('br'),
-                 m('p', 'Convert credits from the Macroexpand/United Seat Swapping Program for AWESOME rewards!'),           
-                m('br'),               
+                 m('p', 'Convert credits from the Macroexpand/United Seat Swapping Program for AWESOME rewards!'),                        m('br'),
                 m('p', '(Limit one offer per customer per transaction.)'),
                 m('br'),
-                m('br'),     
-                m('br'),                  
+                m('br'),
+                m('br'),
                 m('p7', '0 Credits: 10% Discount for first-time customers.'),
                 m('br'),
                 m('p', 'Checkout Code: SAVE10'),
-                m('br'),     
-                m('br'),                          
+                m('br'),
+                m('br'),
                 m('p7', '15 Credits: 5% Discount off total purchase.'),
                 m('br'),
                 m('p', 'Checkout Code: SAVE5'),
-                m('br'),     
-                m('br'),  
+                m('br'),
+                m('br'),
                 m('p7', '5 Credits: $5 off in-flight movies.'),
                 m('br'),
                 m('p', 'Checkout Code: WATCHSTUFF'),
-                m('br'),     
-                m('br'),  
+                m('br'),
+                m('br'),
                 m('p7', '1 Credit: $1 off airplane peanuts.'),
                 m('br'),
                 m('p', 'Checkout Code: EATPEANUTS'),
                 m('br')))),
          ]);
        }
-     };     
+     };
 
      var SwapSeatsPage = {
        view: function () {
@@ -134,7 +133,7 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                  m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),             
+                  m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                  m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
@@ -155,18 +154,18 @@
                    m('form',
                     m('table',
                       m('tr',
-                        m('td',                 
+                        m('td',
                           m('label', "Flight Code: ")))),
-                      m('tr',                        
+                      m('tr',
                           m('td',
-                          m('input[type=text]', {id: 'text1' })))),                                             
+                          m('input[type=text]', {id: 'text1' })))),
                  m('br')),
              m('h4', 'Available Seats'),
-               m('br'),             
+               m('br'),
                m('table',
                 m('tbody', {id: "tbody"})),
                m('br'),
-               m('br'),                               
+               m('br'),
              m('div', { id: 'searchdiv' },
                m('button', {
                  onclick: function () {
@@ -212,18 +211,18 @@
                    m('form',
                     m('table',
                       m('tr',
-                        m('td',                 
+                        m('td',
                           m('label', "Flight Code: ")))),
-                      m('tr',                        
+                      m('tr',
                           m('td',
-                          m('input[type=text]', {id: 'text1' })))),                                             
+                          m('input[type=text]', {id: 'text1' })))),
                  m('br')),
              m('h4', 'Available Flights'),
-               m('br'),             
+               m('br'),
                m('table',
                 m('tbody', {id: "tbody2"})),
                m('br'),
-               m('br')), 
+               m('br')),
              m('div', { id: 'searchdiv' },
                m('button', {
                  onclick: function () {
@@ -311,7 +310,7 @@
          ]);
        }
      };
-     
+
      var SwapConfirmationPage = {
        view: function () {
          return m('main', [
@@ -320,7 +319,7 @@
                m('ul', { class:'sidenav' },
                  m('li', m("a[href='/']", { config: m.route }, "Home")),
                  m('li', m("a[href='/#!/mainPage']", { config: m.route }, "Search Flights")),
-                 m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),        
+                 m('li', m("a[href='/#!/changeFlightPage']", { config: m.route }, "Change Flight")),
                  m('li', m("a[href='/#!/swapSeatsPage']", { config: m.route }, "Swap Seats")),
                  m('li', m("a[href='/#!/promotionsPage']", { config: m.route }, "Rewards"))),
                m('header-h1', { class: 'header-h1' }, 'Macroexpand Travel, Inc.'),
@@ -369,12 +368,12 @@
                m('div', { id: 'pickerdiv' },
                  m('p', 'Departing from ', state.airdept),
                  m('p', 'Arriving at ', state.airarr),
-                 m('br'),                 
+                 m('br'),
                  m('p', 'Departure date: ', state.datedept),
                  m('p', 'Arrival date: ', state.datearr),
                  m('br'),
                  m('p', 'Seat Number: ', "34D"),
-                 m('br'),                 
+                 m('br'),
                  m('p', 'Flight Code: ', "EDM34645600")),
                   m('p', { class:'p6' }, 'Enter the following information to continue to book the flight.'),
                 m('br'),
@@ -383,86 +382,86 @@
                    m('form',
                     m('table',
                       m('tr',
-                        m('td',                 
+                        m('td',
                           m('label', "Name: ")))),
-                      m('tr',                        
+                      m('tr',
                           m('td',
-                          m('input[type=text][placeholder=Bric Mahr]', { id: 'myname' }))),   
+                          m('input[type=text][placeholder=Bric Mahr]', { id: 'myname' }))),
                       m('tr',
                         m('td',
                           m('label', "Email Address: ")))),
-                      m('tr',                        
+                      m('tr',
                         m('td',
-                          m('input[type=text][placeholder=bric_mahr@email.com]', {id: 'myemail' }))), 
+                          m('input[type=text][placeholder=bric_mahr@email.com]', {id: 'myemail' }))),
                  m('br')),
                m('h4', 'Payment Information'),
             	m('div', { class: 'card-row' },
             		m('span', { class: 'visa' }),
             		m('span', { class: 'mastercard' }),
             		m('span', { class: 'amex' }),
-            		m('span', { class: 'discover' })),   
+            		m('span', { class: 'discover' })),
                    m('div', { id: 'pickerdiv' },
                    m('form',
                     m('table',
                     m('tr',
                       m('td',
                         m('label', "Name on Card: ")))),
-                    m('tr',                        
+                    m('tr',
                       m('td',
-                        m('input[type=text][placeholder=Bric Mahr]', {id: 'text1' }))),                                             
+                        m('input[type=text][placeholder=Bric Mahr]', {id: 'text1' }))),
                     m('tr',
                       m('td',
                         m('label', "Card Number: "))),
-                    m('tr',                        
+                    m('tr',
                       m('td',
-                        m('input[type=text]', {id: 'text1' }))), 
-                    m('tr',                                               
+                        m('input[type=text]', {id: 'text1' }))),
+                    m('tr',
                       m('td',
                         m('label', "Expiration Date: "))),
-                    m('tr',                        
+                    m('tr',
                       m('td',
                         m('input[type=text][placeholder=MM/YY]', {id: 'text1' }))),
-                    m('tr',                                                
+                    m('tr',
                       m('td',
                         m('label', "Security Code: "))),
-                    m('tr',                        
+                    m('tr',
                       m('td',
-                        m('input[type=text][placeholder=CVV/CVC]', {id: 'text1' }))),    
-                    m('tr',                                            
+                        m('input[type=text][placeholder=CVV/CVC]', {id: 'text1' }))),
+                    m('tr',
                       m('td',
                         m('label', "Street Address: "))),
-                    m('tr',                        
+                    m('tr',
                       m('td',
                         m('input[type=text][placeholder=e.g. 14400 University Dr.]', {id: 'text1' }))),
-                    m('tr',                        
+                    m('tr',
                       m('td',
                         m('label', "City: "))),
-                    m('tr',                        
+                    m('tr',
                       m('td',
-                        m('input[type=text][placeholder=Fairfax]', {id: 'text1' }))),                         
-                    m('tr',                        
+                        m('input[type=text][placeholder=Fairfax]', {id: 'text1' }))),
+                    m('tr',
                       m('td',
                         m('label', "State "))),
-                    m('tr',                        
+                    m('tr',
                       m('td',
-                        m('input[type=text][placeholder=VA]', {id: 'text1' }))), 
-                    m('tr',                                                                             
+                        m('input[type=text][placeholder=VA]', {id: 'text1' }))),
+                    m('tr',
                       m('td',
                         m('label', "ZIP/Postal Code: "))),
-                    m('tr',                        
+                    m('tr',
                       m('td',
-                        m('input[type=text][placeholder=22030]', {id: 'text1' })))),                                                                                                                          
+                        m('input[type=text][placeholder=22030]', {id: 'text1' })))),
                    m('br')),
-                 m('h4', 'Coupon Code'),  
+                 m('h4', 'Coupon Code'),
                  m('div', { id: 'pickerdiv' },
                    m('form',
                     m('table',
                       m('tr',
-                        m('td',                 
+                        m('td',
                           m('label', "Code: ")))),
-                      m('tr',                        
+                      m('tr',
                           m('td',
-                          m('input[type=text]', {id: 'text1' })))), 
+                          m('input[type=text]', {id: 'text1' })))),
                  m('br')),
                m('br')),
              m('div', { id: 'searchdiv' },
@@ -473,7 +472,7 @@
                    m.route.set('/confirmationPage', null, null);
                  },
                  class: 'button2'
-               }, 'Book Flight'), 
+               }, 'Book Flight'),
                 m('button', {
                  onclick: function () {
                    m.route.set('/splash', null, null);
@@ -510,12 +509,12 @@
              m('div', { id: 'content' },
                m('h2', 'Select Dates'),
                m('div', { id: 'pickerdiv' },
-                 m('label', { id: 'from' }, 'Depart: '), 
+                 m('label', { id: 'from' }, 'Depart: '),
                  m('input[type=text][placeholder=MM/DD/YYYY][id=datepicker]'),
                  m('br'),
                  m('br'),
                  m('label', { id: 'to' }, 'Arrives: '),
-                 m('input[type=text][placeholder=MM/DD/YYYY][id=datepicker2]'),                  
+                 m('input[type=text][placeholder=MM/DD/YYYY][id=datepicker2]'),
                  m('br')),
                m('h2', 'Select Airports'),
                m('br'),
@@ -523,7 +522,7 @@
                  m('label', { id: 'from' }, 'Depart: '),
                  m('input[type=text][class=typeahead][id=airdept]'),
                  m('br'),
-                 m('br'),                
+                 m('br'),
                  m('label', { id: 'to' }, 'Arrives: '),
                  m('input[type=text][class=typeahead][id=airarr][value=Edmonton International Airport]'),
                  m('br')),
@@ -590,7 +589,7 @@
              m('p', { class: 'p1' }, 'Discount online flight reservation booking, ticket purchases, change flights, and seat swapping. Choose flights from hundreds of participating airlines from across the globe.'),
              m('br'),
              m('p', { class: 'p1' }, 'Just enter your destination to get started on your next big adventure.'),
-             m('br'),             
+             m('br'),
              m('div', { class: 'photobanner' },
                m('img[src="img/image-a.JPG"]', { class: 'banner-img' }),
                m('img[src="img/image-b.JPG"]'),
@@ -610,17 +609,17 @@
                m('img[src="img/image-f.JPG"]'),
                m('img[src="img/image-g.JPG"]'),
                m('img[src="img/image-h.JPG"]')),
-             m('p', {class:'p1'}, 
-             	m('img[src="img/new.png"]', {class: 'resize'}),  
+             m('p', {class:'p1'},
+             	m('img[src="img/new.png"]', {class: 'resize'}),
              	m('span', {class:'t1'}, 'You Can Swap Your Seats Now!'),
              	m('br'),
              	m('span', {class:'t2'},'Macroexpand Travel Exclusive Offer!!'),
              	m('br'), m('br')),
-             m('p', { class: 'p5' }, 'Not happy with your assigned seat? No problem! Swap your seat with other interested passengers on your flight using our unique flight credit system.'),                
+             m('p', { class: 'p5' }, 'Not happy with your assigned seat? No problem! Swap your seat with other interested passengers on your flight using our unique flight credit system.'),
              m('div', { id: 'linkdiv' },
                m("a[href='/#!/swapSeatsPage']", { config: m.route }, 'Click here to learn more!')),
                m('br'),
-               m('br'),          
+               m('br'),
              m('div', { id: 'searchdiv' },
                m('input[type=text][id=airarr]', { class: 'typeahead' }),
                m('button', {
@@ -631,20 +630,20 @@
                  class: 'button'
                }, 'Search Flights!')),
                m('br'),
-               m('br'),               
                m('br'),
                m('br'),
-               m('br'),               
                m('br'),
-               m('br'),               
-               m('br'),             
+               m('br'),
+               m('br'),
+               m('br'),
+               m('br'),
                m('br'))
          ]);
        },
        render: function () { $(document).ready(); }
      };
 
-     // AUTOCOMPLETE 
+     // AUTOCOMPLETE
      $(document).ready(function () {
 
      // SLIDER
@@ -658,7 +657,7 @@
            handle.text( ui.value );
             }
           });
-        } );    
+        } );
     });
 
      // MONGO USERS
@@ -683,9 +682,9 @@
               tbody.innerHTML += tr;
           }
         }
-      });      
+      });
 
-     // DATEPICKER 
+     // DATEPICKER
      $( "#datepicker" ).ready(function() {
           $( "#datepicker" ).datepicker();
         });
@@ -713,7 +712,7 @@
                '/changeFlightPage': ChangeFlightPage,
                '/changeConfirmationPage': ChangeConfirmationPage,
                '/promotionsPage': PromotionsPage
-             });          
+             });
     </script>
   </body>
 </html>

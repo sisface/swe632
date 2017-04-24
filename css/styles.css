@@ -257,8 +257,8 @@ div.content {
     background-color:#207cca;
     color:#fafafa;
     margin-bottom: 50px;
-    top: 13px; 
-    line-height: 2em;   
+    top: 13px;
+    line-height: 2em;
 }
 .button:hover  {
     background-color:#fafafa;
@@ -293,7 +293,7 @@ div.content {
 input[type=text] {
     width:225px;
     height:26px;
-    font-size: large;    
+    font-size: large;
     border: 2px solid #207cca;
 }
 
@@ -370,7 +370,7 @@ input[type=text] {
     width: 17em;
     padding: .2em .2em 0;
     display: none;
-    background:#2F99B4; 
+    background:#2F99B4;
 }
 
 .ui-datepicker .ui-datepicker-title {
@@ -378,7 +378,7 @@ input[type=text] {
     line-height: 1.8em;
     text-align: center;
     color:#FFFFFF;
-    background:#2F99B4; 
+    background:#2F99B4;
 }
 
 .ui-datepicker table {
@@ -388,7 +388,7 @@ input[type=text] {
     font-family:verdana;
     margin: 0 0 .4em;
     color:#000000;
-    background:#9EEFEE; 
+    background:#9EEFEE;
 }
 
 /* This is date TD */
@@ -528,7 +528,7 @@ input[type=text] {
     visibility: hidden;
     &:checked + label:after {
       opacity: 1;
-    }    
+    }
   }
 }
 
@@ -590,7 +590,7 @@ input[type=text] {
     transform: scale(0.5, 0.5);
     -ms-transform: scale(0.5, 0.5);
     -webkit-transform: scale(0.5, 0.5);
-    }    
+    }
 
 #content {
         margin-right: 0;
@@ -733,13 +733,13 @@ input[type=text] {
 
 /* exclusive offers */
 
-.t1, .t2 { 
-    background-color: #f4b30e; 
+.t1, .t2 {
+    background-color: #f4b30e;
     font: large Helvetica, Verdana, sans-serif;
-    font-weight: bold; 
-    letter-spacing: -1px; 
-    line-height: 1; 
-    text-align: center; 
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center;
 }
 
 .t3 {

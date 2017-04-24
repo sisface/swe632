@@ -6,7 +6,7 @@
 var express    = require('express');        // Call express.
 var app        = express();                 // Define app using express.
 var bodyParser = require('body-parser');
-var path = require('path');                 // Needed to serve static content.
+var path       = require('path');           // Needed to serve static content.
 
 // Configure app to use bodyParser() to get the data from a POST.
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -49,7 +49,7 @@ var Airport = mongoose.model('airports', airportSchema);
 
 var userSchema = new mongoose.Schema({
     fname: String,
-    lname: String,    
+    lname: String,
     seatno: String
 });
 
