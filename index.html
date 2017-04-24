@@ -25,7 +25,7 @@
      function getAllAirports() {
        m.request({
          method: 'GET',
-         url: 'http://localhost:8080/api/airport',
+         url: '/api/airport',
          withCredentials: true
        }).then(function (result) {
          allAirports = result;
@@ -64,7 +64,7 @@
      function getAllUsers () {
        m.request({
          method: 'GET',
-         url: 'http://localhost:8080/api/user',
+         url: '/api/user',
          withCredentials: true
        }).then(function (result) {
          allUsers = result;

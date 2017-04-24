@@ -12,7 +12,7 @@ var path       = require('path');           // Needed to serve static content.
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port = process.env.PORT || 8080;        // Set port.
+var port = process.env.PORT || 9000;        // Set port.
 
 // ROUTES FOR OUR API
 var router = express.Router();              // Get an instance of the express Router.
